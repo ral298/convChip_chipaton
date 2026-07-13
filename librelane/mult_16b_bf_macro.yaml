@@ -1,0 +1,71 @@
+# Standalone hardening config for the counter macro.
+# Runs the LibreLane Classic flow against rtl/counter.sv, producing the
+# GDS / LEF / Liberty / Verilog netlist views that chip_top_multi
+# later pulls in under `MACROS:`.
+
+meta:
+  version: 3
+  flow: Classic
+
+DESIGN_NAME: mult_16b_bf
+
+VERILOG_FILES:
+  - dir::../rtl/mult_16b_bf.v
+
+PNR_SDC_FILE: dir::../sdc/mult_16b_bf.sdc
+SIGNOFF_SDC_FILE: dir::../sdc/mult_16b_bf.sdc
+# Single-clock 8-bit register. Match the template's 25 MHz.
+
+#CLOCK_PERIOD: 10   # ns
+
+# Small block -- let LibreLane size the die from utilisation.
+#FP_SIZING: "absolute"
+#DIE_AREA: [0, 0, 120, 120]
+FP_SIZING: relative
+FP_CORE_UTIL: 73
+PL_TARGET_DENSITY_PCT: 75
+# Power / ground nets.
+VDD_NETS:
+  - VDD
+GND_NETS:
+  - VSS
+
+# Signoff / streamout.
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+# Routing / ESD.
+RT_MAX_LAYER: Metal4
+PDN_MULTILAYER: false
+
+
+
+# Power distribution network (straps + pitch).
+#PDN_VWIDTH: 5
+#PDN_HWIDTH: 5
+#PDN_VSPACING: 1
+#PDN_HSPACING: 1
+#PDN_VPITCH: 75
+#PDN_HPITCH: 75
+#PDN_EXTEND_TO: boundary
+
+
+# CTS defaults.
+CTS_CLK_MAX_WIRE_LENGTH: 0
+CTS_DISTANCE_BETWEEN_BUFFERS: 0
+CTS_SINK_CLUSTERING_SIZE: 20
+CTS_SINK_CLUSTERING_MAX_DIAMETER: 60
+
+# Margins.
+TOP_MARGIN_MULT: 1
+BOTTOM_MARGIN_MULT: 1
+LEFT_MARGIN_MULT: 6
+RIGHT_MARGIN_MULT: 6
+
+# Area-first synthesis (the counter is tiny, we do not need effort).
+SYNTH_STRATEGY: "AREA 2"
+
+# Route-routeability knob for very small designs.
+GRT_ALLOW_CONGESTION: true
+
+# Per-macro DRC / LVS stays enabled; they are cheap on a block this
+# small and give a green baseline before integration.

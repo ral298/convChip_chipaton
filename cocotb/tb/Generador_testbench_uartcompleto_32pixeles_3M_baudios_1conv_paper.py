@@ -11,7 +11,7 @@ from skimage.transform import rescale, resize, downscale_local_mean
 import matplotlib.pyplot as plt
 
 import subprocess
-import serial
+#import serial
 import time
 
 # Configura el puerto serial, asegúrate de ajustar el puerto y la velocidad adecuadamente

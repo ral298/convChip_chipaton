@@ -1,0 +1,119 @@
+meta:
+  version: 3
+  flow: Classic
+DESIGN_NAME: con32bits_parall
+VERILOG_FILES:
+- dir::../rtl/con32bits_parall.v
+CLOCK_PORT: clock
+CLOCK_NET: clock
+CLOCK_PERIOD: 100
+#FP_SIZING: absolute
+#DIE_AREA:
+#- 0
+#- 0
+#- 2000
+#- 2000
+FP_SIZING: relative
+FP_CORE_UTIL: 30
+PL_TARGET_DENSITY_PCT: 25
+MAX_FANOUT_CONSTRAINT: 32
+CTS_CLK_BUFFERS:
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+
+CTS_ROOT_BUFFER: gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+EXTRA_EXCLUDED_CELLS:
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_12
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+- gf180mcu_fd_sc_mcu7t5v0__clkbuf_20
+ROUTING_CORES: 16
+GRT_ANT_ITERS: 5
+DIODE_INSERTION_STRATEGY: 3
+GRT_MAX_DIODE_INS_ITERS: 3
+GLB_OPTIMIZE_MIRRORING: 0
+RUN_ANTENNA_REPAIR: true
+RUN_HEURISTIC_DIODE_INSERTION: false
+DIODE_PADDING: 1
+VDD_NETS:
+- VDD
+GND_NETS:
+- VSS
+GPL_CELL_PADDING: 6
+DPL_CELL_PADDING: 6
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+RT_MIN_LAYER: Metal1
+RT_MAX_LAYER: Metal5
+PDN_MULTILAYER: false
+#PDN_VWIDTH: 1.6
+#PDN_HWIDTH: 1.6
+#PDN_VSPACING: 2
+#PDN_HSPACING: 2
+#PDN_VPITCH: 140
+#PDN_HPITCH: 140
+#PDN_EXTEND_TO: boundary
+CTS_CLK_MAX_WIRE_LENGTH: 50
+CTS_DISTANCE_BETWEEN_BUFFERS: 0
+CTS_SINK_CLUSTERING_SIZE: 100
+CTS_SINK_CLUSTERING_MAX_DIAMETER: 200
+TOP_MARGIN_MULT: 2
+BOTTOM_MARGIN_MULT: 2
+LEFT_MARGIN_MULT: 2
+RIGHT_MARGIN_MULT: 2
+SYNTH_STRATEGY: AREA 3
+GRT_ALLOW_CONGESTION: true
+MACROS:
+  punt_mo_seg:
+    gds:
+    - /foss/designs/convChip/user_macros/build/punt_mo_seg/gds/punt_mo_seg.gds
+    lef:
+    - /foss/designs/convChip/user_macros/build/punt_mo_seg/lef/punt_mo_seg.lef
+    vh:
+    - /foss/designs/convChip/user_macros/build/punt_mo_seg/nl/punt_mo_seg.nl.v
+    lib:
+      nom_tt_025C_5v00:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/nom_tt_025C_5v00/punt_mo_seg__nom_tt_025C_5v00.lib
+      nom_ss_125C_4v50:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/nom_ss_125C_4v50/punt_mo_seg__nom_ss_125C_4v50.lib
+      nom_ff_n40C_5v50:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/nom_ff_n40C_5v50/punt_mo_seg__nom_ff_n40C_5v50.lib
+      min_tt_025C_5v00:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/min_tt_025C_5v00/punt_mo_seg__min_tt_025C_5v00.lib
+      min_ss_125C_4v50:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/min_ss_125C_4v50/punt_mo_seg__min_ss_125C_4v50.lib
+      min_ff_n40C_5v50:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/min_ff_n40C_5v50/punt_mo_seg__min_ff_n40C_5v50.lib
+      max_tt_025C_5v00:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/max_tt_025C_5v00/punt_mo_seg__max_tt_025C_5v00.lib
+      max_ss_125C_4v50:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/max_ss_125C_4v50/punt_mo_seg__max_ss_125C_4v50.lib
+      max_ff_n40C_5v50:
+      - /foss/designs/convChip/user_macros/build/punt_mo_seg/lib/max_ff_n40C_5v50/punt_mo_seg__max_ff_n40C_5v50.lib
+    instances:
+      genblk1[0].u_punt_mo:
+        location:
+        - 100
+        - 100
+        orientation: N
+      genblk1[1].u_punt_mo:
+        location:
+        - 100
+        - 900
+        orientation: N
+      genblk1[2].u_punt_mo:
+        location:
+        - 900
+        - 100
+        orientation: N
+      genblk1[3].u_punt_mo:
+        location:
+        - 900
+        - 900
+        orientation: N
+PDN_MACRO_CONNECTIONS:
+- .*u_punt_.* VDD VSS VDD VSS
+FP_MACRO_HORIZONTAL_HALO: 10
+FP_MACRO_VERTICAL_HALO: 10
+#PDN_HORIZONTAL_HALO: 5
+#PDN_VERTICAL_HALO: 5
+#PDN_CFG: dir::pdn_cfg.tcl

@@ -1,0 +1,103 @@
+# Standalone hardening config for the counter macro.
+# Runs the LibreLane Classic flow against rtl/counter.sv, producing the
+# GDS / LEF / Liberty / Verilog netlist views that chip_top_multi
+# later pulls in under `MACROS:`.
+
+meta:
+  version: 3
+  flow: Classic
+
+DESIGN_NAME: con32bits_parall
+
+VERILOG_FILES:  
+  - dir::../rtl/con32bits_parall.v
+  - dir::../rtl/punt_mo_seg.v
+  - dir::../rtl/suma_16b.v
+  - dir::../rtl/mult_16b_bf.v
+# Single-clock 8-bit register. Match the template's 25 MHz.
+CLOCK_PORT: clock
+CLOCK_NET: clock
+CLOCK_PERIOD: 20   # ns
+
+# Small block -- let LibreLane size the die from utilisation.
+#FP_SIZING: "absolute"
+#DIE_AREA: [0, 0, 2000, 2000]
+FP_SIZING: relative
+FP_CORE_UTIL: 50
+#PL_TARGET_DENSITY_PCT: 30
+PL_TARGET_DENSITY_PCT: 35
+
+MAX_FANOUT_CONSTRAINT: 32
+
+CTS_CLK_BUFFERS:
+  - gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+  - gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+  - gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+CTS_ROOT_BUFFER: gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+
+
+EXTRA_EXCLUDED_CELLS:
+
+ - gf180mcu_fd_sc_mcu7t5v0__clkbuf_12
+ - gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+ - gf180mcu_fd_sc_mcu7t5v0__clkbuf_20
+
+ROUTING_CORES: 16              # Hilos para el Ruteador Detallado (TritonRoute)
+#DRT_OPT_ITERS: 96
+GRT_ANT_ITERS: 5
+DIODE_INSERTION_STRATEGY: 3
+GRT_MAX_DIODE_INS_ITERS: 3
+GLB_OPTIMIZE_MIRRORING: 0
+
+
+RUN_ANTENNA_REPAIR: true
+RUN_HEURISTIC_DIODE_INSERTION: false
+DIODE_PADDING: 1
+
+# Power / ground nets.
+VDD_NETS:
+  - VDD
+GND_NETS:
+  - VSS
+
+# Signoff / streamout.
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+# Routing / ESD.
+RT_MIN_LAYER: Metal2
+RT_MAX_LAYER: Metal5 #originalmente estaba en 4 y en false el pdn multilayer
+PDN_MULTILAYER: false
+
+
+
+# Power distribution network (straps + pitch).
+PDN_VWIDTH: 1.6
+PDN_HWIDTH: 1.6
+PDN_VSPACING: 2
+PDN_HSPACING: 2
+PDN_VPITCH: 140
+PDN_HPITCH: 140
+PDN_EXTEND_TO: boundary
+
+
+# CTS defaults.
+CTS_CLK_MAX_WIRE_LENGTH: 0
+CTS_DISTANCE_BETWEEN_BUFFERS: 0
+CTS_SINK_CLUSTERING_SIZE: 20
+CTS_SINK_CLUSTERING_MAX_DIAMETER: 60
+
+# Margins.
+TOP_MARGIN_MULT: 2
+BOTTOM_MARGIN_MULT: 2
+LEFT_MARGIN_MULT: 2
+RIGHT_MARGIN_MULT: 2
+
+# Area-first synthesis (the counter is tiny, we do not need effort).
+SYNTH_STRATEGY: "DELAY 1"
+#"AREA 1" #estaba originalmente en area 2
+
+# Route-routeability knob for very small designs.
+GRT_ALLOW_CONGESTION: false
+
+# Per-macro DRC / LVS stays enabled; they are cheap on a block this
+# small and give a green baseline before integration.

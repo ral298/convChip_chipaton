@@ -1,0 +1,86 @@
+# Standalone hardening config for the counter macro.
+# Runs the LibreLane Classic flow against rtl/counter.sv, producing the
+# GDS / LEF / Liberty / Verilog netlist views that chip_top_multi
+# later pulls in under `MACROS:`.
+
+meta:
+  version: 3
+  flow: Classic
+
+DESIGN_NAME: punt_mo_seg
+
+VERILOG_FILES:
+  - dir::../rtl/punt_mo_seg.v
+  - dir::../rtl/suma_16b.v
+  - dir::../rtl/mult_16b_bf.v
+#PNR_SDC_FILE: dir::../sdc/punt_mo_seg.sdc
+#SIGNOFF_SDC_FILE: dir::../sdc/punt_mo_seg.sdc
+# Single-clock 8-bit register. Match the template's 25 MHz.
+CLOCK_PORT: clock
+CLOCK_NET: clock
+CLOCK_PERIOD: 20   # ns
+
+# Small block -- let LibreLane size the die from utilisation.
+#FP_SIZING: "absolute"
+#DIE_AREA: [0, 0, 199, 990]
+FP_SIZING: relative
+FP_CORE_UTIL: 75
+PL_TARGET_DENSITY_PCT: 75
+MAX_FANOUT_CONSTRAINT: 32
+# Power / ground nets.
+VDD_NETS:
+  - VDD
+GND_NETS:
+  - VSS
+
+# Signoff / streamout.
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+# Routing / ESD.
+RT_MAX_LAYER: Metal4
+PDN_MULTILAYER: false
+
+CTS_CLK_BUFFERS:
+  - gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+  - gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+
+CTS_ROOT_BUFFER: gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+
+
+EXTRA_EXCLUDED_CELLS:
+ - gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+ - gf180mcu_fd_sc_mcu7t5v0__clkbuf_12
+ - gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+ - gf180mcu_fd_sc_mcu7t5v0__clkbuf_20
+ 
+
+# Power distribution network (straps + pitch).
+PDN_VWIDTH: 1.25
+PDN_HWIDTH: 1.2
+PDN_VSPACING: 1.6
+PDN_HSPACING: 1.6
+PDN_VPITCH: 120
+PDN_HPITCH: 120
+PDN_EXTEND_TO: boundary
+
+
+# CTS defaults.
+CTS_CLK_MAX_WIRE_LENGTH: 0
+CTS_DISTANCE_BETWEEN_BUFFERS: 0
+CTS_SINK_CLUSTERING_SIZE: 20
+CTS_SINK_CLUSTERING_MAX_DIAMETER: 60
+
+# Margins.
+TOP_MARGIN_MULT: 2
+BOTTOM_MARGIN_MULT: 2
+LEFT_MARGIN_MULT: 2
+RIGHT_MARGIN_MULT: 2
+
+# Area-first synthesis (the counter is tiny, we do not need effort).
+SYNTH_STRATEGY: "AREA 2"
+
+# Route-routeability knob for very small designs.
+GRT_ALLOW_CONGESTION: false
+
+# Per-macro DRC / LVS stays enabled; they are cheap on a block this
+# small and give a green baseline before integration.
