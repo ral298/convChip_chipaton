@@ -20,6 +20,34 @@ CLK_PERIOD_NS = 20
 # 1 / 3,000,000 s = 333.333 ns
 BIT_TIME_NS = round((1 / 3000000) / 1e-9, 3) 
 
+
+async def uart_receive_byte(dut):
+    """
+    Espera el bit de Start en la línea TXD y muestrea los 8 bits de datos
+    a 3M Baudios, devolviendo un valor entero entre 0 y 255.
+    """
+    # 1. Esperar al bit de START (flanco de bajada: la línea pasa de 1 a 0)
+    await FallingEdge(dut.txd)
+    
+    # 2. Esperar 1.5 tiempos de bit para muestrear justo en el CENTRO del primer bit de datos (LSB)
+    await Timer(round(BIT_TIME_NS * 1.5, 3), units="ns")
+    
+    byte_recibido = 0
+    
+    # 3. Muestrear los 8 bits de datos (asumiendo formato estándar LSB first)
+    for i in range(8):
+        bit = int(dut.txd.value)
+        byte_recibido |= (bit << i)  # Empaquetar bit en la posición i
+        
+        # Esperar 1 tiempo de bit completo para caer en el centro del siguiente bit
+        if i < 7:
+            await Timer(BIT_TIME_NS, units="ns")
+            
+    # 4. Esperar a que pase el bit de STOP (1)
+    await Timer(BIT_TIME_NS, units="ns")
+    
+    return byte_recibido
+
 def binario_a_hexadecimal(binario):
     # Convertir el número binario a entero
     entero = int(binario, 2)
@@ -156,4 +184,87 @@ async def test_uart_convolution(dut):
         
     # Esperar el tiempo final de procesamiento equivalente a tus #6500000000;
     dut._log.info("Esperando procesamiento final...")
-    await Timer(6500000, units="ns")
+    #await Timer(6500000, units="ns")
+    dut._log.info("Solicitando y leyendo datos calculados de la salida TXD...")
+    
+    # Si sabes cuántos bytes esperas recibir (por ejemplo, 14x14 pixeles resultantes)
+    bytes_salida = []
+    
+    # Supongamos que tu módulo responde transmitiendo bytes tras procesar:
+    for n in range(image_fpga_ren * image_fpga_col):
+        # Llama a la corrutina y se congela hasta que la UART mande el byte completo
+        dato_8bits = await uart_receive_byte(dut)
+        dato_8bits = dato_8bits | ((await uart_receive_byte(dut))<<8)
+        bytes_salida.append(dato_8bits)
+        
+        # Imprime en la consola de cocotb en tiempo real
+        dut._log.info(f"Byte [{n}] recibido de TXD: Hex=0x{dato_8bits:02X}, Dec={dato_8bits}")
+
+    # Si quieres reconstruir tu matriz resultante de la convolución:
+    matriz_salida = np.array(bytes_salida, dtype=np.uint16).view(np.int16).reshape((image_fpga_ren, image_fpga_col))
+    
+    # dut._log.info(f"\n{bytes_salida}, len: {len(bytes_salida)}")
+    dut._log.info("Matriz recibida desde el chip:")
+    dut._log.info(f"\n{matriz_salida}")
+    await Timer(100000, units="ns")
+    tam_fil=filt.shape[2]
+    con_ima=np.zeros((image_dummy.shape[0]-2,image_dummy.shape[1]-2),dtype=np.float64)
+    # sub_capas_ima=np.zeros((tam_fil,image.shape[0]-2,image.shape[1]-2),dtype=np.float64)
+    z=0
+    for i in range(image_dummy.shape[0]-2):
+        for j in range(image_dummy.shape[1]-2):
+            for i_con in range(3):
+                for j_con in range(3):
+                    # print(i,j,i_con,j_con)
+                    con_ima[i,j]+=(filt[z,i_con,j_con]*image_dummy[i+i_con,j+j_con])#*(5/255)*(5/255)*(1/10)*(1/2.5)
+                    # sub_capas_ima[z,i,j]+=(filt[z,i_con,j_con]*image[i+i_con,j+j_con,z])#*(5/255)*(5/255)*(1/10)*(1/2.5)
+        # con_ima[i,j,z]+=bias[0]
+            # print(z,i,j,con_ima[z,i,j])
+    con_ima+=bias[z]
+    con_ima= np.array(con_ima,dtype=np.int16)
+    dut._log.info("Matriz calculada con al convolucion clasica:")
+    dut._log.info(f"\n{con_ima}")
+    imagen_comparativa= (con_ima==matriz_salida)
+    dut._log.info("Matriz de comparacion de los valores numericos:")
+    dut._log.info(f"\n{imagen_comparativa}")
+    
+    if (np.sum(imagen_comparativa*1)==image_fpga_ren * image_fpga_col):
+        dut._log.info(f"\nLa imagen fue calculada correctamente")
+        import matplotlib.pyplot as plt
+        from multiprocessing import Process
+        # plt.figure()
+        fig, axs = plt.subplots(1, 3, figsize=(12, 4))
+        axs[0].imshow(image_dummy, cmap='gray')
+        axs[0].set_title('Imagen Original')
+        
+        axs[1].imshow(matriz_salida, cmap='gray')
+        axs[1].set_title('Imagen calculada con CHIP')
+        ren_pc, col_pc = matriz_salida.shape
+        for i in range(ren_pc):
+            for j in range(col_pc):
+                val = matriz_salida[i, j]
+                # Cambiar color de texto según la intensidad del fondo para mejor contraste
+                color_texto = "white" if val < (matriz_salida.max() + matriz_salida.min()) / 2 else "black"
+                axs[1].text(j, i, str(val), ha='center', va='center', 
+                            color=color_texto, fontsize=6)
+        axs[2].imshow(con_ima, cmap='gray')
+        axs[2].set_title('Imagen calculada con PC')
+        ren_chip, col_chip = con_ima.shape
+        for i in range(ren_chip):
+            for j in range(col_chip):
+                val = con_ima[i, j]
+                color_texto = "white" if val < (con_ima.max() + con_ima.min()) / 2 else "black"
+                axs[2].text(j, i, str(val), ha='center', va='center', 
+                            color=color_texto, fontsize=6)
+        # plt.tight_layout()
+        plt.savefig('Completa.png')
+        # plt.show()
+        plt.show(block=False)
+        plt.pause(2)
+        dut._log.info(f"\nSe creo la imagen resultante: Completa.png")
+    else:
+        dut._log.error(f"Error la cantidad de  valores fue {np.sum(imagen_comparativa*1)} deberia de ser {image_fpga_ren * image_fpga_col}")
+        
+    
+    
+    
