@@ -25,15 +25,19 @@ VERILOG_FILES:
 CLOCK_PORT: clk_ref
 CLOCK_NET: clk_ref
 CLOCK_PERIOD: 20   # ns
+RUN_POST_GPL_DESIGN_REPAIR: true
 RUN_POST_CTS_RESIZER_TIMING: true
+RUN_POST_GRT_DESIGN_REPAIR: true       # Repara Slew y Max Cap post-GRT
+RUN_POST_GRT_RESIZER_TIMING: true      # Optimiza Setup post-GRT (opcional pero útil)
+GRT_ADJUSTMENT: 0.15                   # Aumenta la capacidad efectiva de las capas de metal
 
 # Límites de seguridad para evitar explosión de buffers:
-PL_RESIZER_HOLD_MAX_BUFFER_PCT: 15
-PL_RESIZER_SETUP_MAX_BUFFER_PCT: 15
+PL_RESIZER_HOLD_MAX_BUFFER_PCT: 10
+PL_RESIZER_SETUP_MAX_BUFFER_PCT: 10
 
 # Márgenes de Slack razonables para GF180MCU:
-PL_RESIZER_SETUP_SLACK_MARGIN: 0.15
-PL_RESIZER_HOLD_SLACK_MARGIN: 0.05
+PL_RESIZER_SETUP_SLACK_MARGIN: 0.5
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.5
 
 # Prioridad de reparación:
 PL_RESIZER_ALLOW_SETUP_VIOS: true
@@ -41,14 +45,14 @@ PL_RESIZER_ALLOW_SETUP_VIOS: true
 
 # Small block -- let LibreLane size the die from utilisation.
 #FP_SIZING: "absolute"
-DIE_AREA: [0, 0, 1200, 1200]
-FP_SIZING: relative
-FP_CORE_UTIL: 70
+DIE_AREA: [0, 0, 1500, 1500]
+FP_SIZING: absolute
+#FP_CORE_UTIL: 70
 PL_TARGET_DENSITY_PCT: 25
 #PL_TARGET_DENSITY_PCT: 25
 PL_MAX_DISPLACEMENT_Y: 300 
 
-MAX_FANOUT_CONSTRAINT:  80
+MAX_FANOUT_CONSTRAINT:  48
 #8192
 
 CTS_CLK_BUFFERS:
@@ -119,6 +123,10 @@ PDN_HPITCH: 75
 #PDN_CORE_RING_CONNECT_TO_PAD_LAYERS: [Metal2]
 
 
+# Ruteo explícito por capas para proteger pines
+SIGNAL_WIRE_RC_LAYERS: [Metal1, Metal2, Metal3, Metal4]
+CLOCK_WIRE_RC_LAYERS: [Metal3, Metal4, Metal5]
+
 # CTS defaults.
 CTS_SINK_CLUSTERING_ENABLE: true
 CTS_OBSTRUCTION_AWARE: true
@@ -129,7 +137,7 @@ CTS_APPLY_NDR: root_only
 
 CTS_CLK_MAX_WIRE_LENGTH: 0
 
-CTS_SINK_CLUSTERING_SIZE: 90
+CTS_SINK_CLUSTERING_SIZE: 80
 #256
 CTS_SINK_CLUSTERING_MAX_DIAMETER: 120
 #512
@@ -143,7 +151,7 @@ SYNTH_STRATEGY: "AREA 3"
 #"AREA 1" #estaba originalmente en area 2
 
 # Route-routeability knob for very small designs.
-GRT_ALLOW_CONGESTION: true
+GRT_ALLOW_CONGESTION: false
 
 # Per-macro DRC / LVS stays enabled; they are cheap on a block this
 # small and give a green baseline before integration.
