@@ -1,157 +1,304 @@
 # Standalone hardening config for the counter macro.
+
 # Runs the LibreLane Classic flow against rtl/counter.sv, producing the
+
 # GDS / LEF / Liberty / Verilog netlist views that chip_top_multi
+
 # later pulls in under `MACROS:`.
 
+
+
 meta:
+
   version: 3
+
   flow: Classic
+
+
 
 DESIGN_NAME: con32_one_instruction
 
+
+
 VERILOG_FILES:  
+
 - dir::../src/con32_one_instruction.v
+
 - dir::../src/acti.v
+
 - dir::../src/con32bits_parall.v
+
 - dir::../src/four_palabras_uart.v
+
 - dir::../src/mult_16b_bf.v
+
 - dir::../src/punt_mo_seg.v
+
 - dir::../src/salida.v
+
 - dir::../src/suma_16b.v
+
 - dir::../src/uart_tx_4in4.v
+
 - dir::../src/uart_ultimo.v
 
+
+
 # Single-clock 8-bit register. Match the template's 25 MHz.
+
 CLOCK_PORT: clk_ref
+
 CLOCK_NET: clk_ref
+
 CLOCK_PERIOD: 20   # ns
-RUN_POST_GPL_DESIGN_REPAIR: true
+
 RUN_POST_CTS_RESIZER_TIMING: true
+
 RUN_POST_GRT_DESIGN_REPAIR: true       # Repara Slew y Max Cap post-GRT
+
 RUN_POST_GRT_RESIZER_TIMING: true      # Optimiza Setup post-GRT (opcional pero útil)
+
+
 GRT_ADJUSTMENT: 0.15                   # Aumenta la capacidad efectiva de las capas de metal
 
+
+
 # Límites de seguridad para evitar explosión de buffers:
+
 PL_RESIZER_HOLD_MAX_BUFFER_PCT: 10
+
 PL_RESIZER_SETUP_MAX_BUFFER_PCT: 10
 
+#DESIGN_REPAIR_BUFFER_INPUT_PORTS: true
+#DESIGN_REPAIR_TIE_FANOUT: true
+
 # Márgenes de Slack razonables para GF180MCU:
-PL_RESIZER_SETUP_SLACK_MARGIN: 0.5
-PL_RESIZER_HOLD_SLACK_MARGIN: 0.5
+
+PL_RESIZER_SETUP_SLACK_MARGIN: 0.15
+
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.05
+
+
 
 # Prioridad de reparación:
+
 PL_RESIZER_ALLOW_SETUP_VIOS: true
 
 
-# Small block -- let LibreLane size the die from utilisation.
-#FP_SIZING: "absolute"
-DIE_AREA: [0, 0, 1500, 1500]
-FP_SIZING: absolute
-#FP_CORE_UTIL: 70
-PL_TARGET_DENSITY_PCT: 25
-#PL_TARGET_DENSITY_PCT: 25
-PL_MAX_DISPLACEMENT_Y: 300 
 
-MAX_FANOUT_CONSTRAINT:  48
+
+
+# Small block -- let LibreLane size the die from utilisation.
+
+#FP_SIZING: "absolute"
+
+DIE_AREA: [0, 0, 1500, 1500]
+
+FP_SIZING: absolute
+
+#FP_CORE_UTIL: 70
+
+#PL_TARGET_DENSITY_PCT: 45
+
+#PL_TARGET_DENSITY_PCT: 25
+
+#PL_MAX_DISPLACEMENT_Y: 300 
+
+
+
+MAX_FANOUT_CONSTRAINT:  32
+
 #8192
 
+
+
 CTS_CLK_BUFFERS:
+
 - gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+
 - gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+
 - gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
 
+
+
 CTS_ROOT_BUFFER: gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+
 EXTRA_EXCLUDED_CELLS:
+
 - gf180mcu_fd_sc_mcu7t5v0__clkbuf_12
+
 - gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+
 - gf180mcu_fd_sc_mcu7t5v0__clkbuf_20
 
+
+
 ROUTING_CORES: 12              # Hilos para el Ruteador Detallado (TritonRoute)
+
 KLAYOUT_DRC_THREADS: 12
+
 KLAYOUT_DENSITY_THREADS: 12
+
 KLAYOUT_XOR_THREADS: 12
+
 DRT_THREADS: 12
+
 STA_THREADS: 12
+
 #DRT_OPT_ITERS: 96
+
 #GRT_ANT_ITERS: 5
+
 #DIODE_INSERTION_STRATEGY: 3
+
 #GRT_MAX_DIODE_INS_ITERS: 3
+
 #GLB_OPTIMIZE_MIRRORING: 0
 
 
+
+
+
 RUN_ANTENNA_REPAIR: true
+
 RUN_HEURISTIC_DIODE_INSERTION: false
 #DIODE_PADDING: 1
 
 
 
+
+
+
+
 # Power / ground nets.
+
 VDD_NETS:
+
   - VDD
+
 GND_NETS:
+
   - VSS
 
+
+
 GPL_CELL_PADDING: 1
+
 DPL_CELL_PADDING: 1
 
+
+
 # Signoff / streamout.
+
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 
+
+
 # Routing / ESD.
-RT_MIN_LAYER: Metal1
+
+RT_MIN_LAYER: Metal2
+
 RT_MAX_LAYER: Metal5 #originalmente estaba en 4 y en false el pdn multilayer
+
+
+SIGNAL_WIRE_RC_LAYERS: [Metal2, Metal3, Metal4]
+
+# El reloj viaja en las capas más altas y limpias
+CLOCK_WIRE_RC_LAYERS: [Metal3, Metal4, Metal5]
+RT_CLOCK_MIN_LAYER: Metal3
+# Bloquea al 100% el uso de Metal1 para ruteo intercelda
+GRT_LAYER_ADJUSTMENTS: [1.0, 0.1, 0.0, 0.0, 0.0]
 
 
 
 # Power distribution network (straps + pitch).
+
 PDN_MULTILAYER: true
+
 #PDN_VWIDTH: 1.6
+
 #PDN_HWIDTH: 1.6
+
 #PDN_VSPACING: 2
+
 #PDN_HSPACING: 2
+
 #PDN_VPITCH: 140
+
 #PDN_HPITCH: 140
+
 #PDN_EXTEND_TO: boundary
+
 PDN_VWIDTH: 5
+
 PDN_HWIDTH: 5
+
 PDN_VSPACING: 1
+
 PDN_HSPACING: 1
+
 PDN_VPITCH: 75
+
 PDN_HPITCH: 75
+
+
+
 
 
 #PDN_CORE_RING_CONNECT_TO_PAD_LAYERS: [Metal2]
 
 
-# Ruteo explícito por capas para proteger pines
-SIGNAL_WIRE_RC_LAYERS: [Metal1, Metal2, Metal3, Metal4]
-CLOCK_WIRE_RC_LAYERS: [Metal3, Metal4, Metal5]
+
+
 
 # CTS defaults.
+
 CTS_SINK_CLUSTERING_ENABLE: true
-CTS_OBSTRUCTION_AWARE: true
+
+#CTS_OBSTRUCTION_AWARE: true
+
 CTS_DISTANCE_BETWEEN_BUFFERS: 120
-CTS_BALANCE_LEVELS: true
-CTS_APPLY_NDR: root_only
+
+#CTS_BALANCE_LEVELS: true
+
+CTS_APPLY_NDR: none
+#root_only
+
+
+
 
 
 CTS_CLK_MAX_WIRE_LENGTH: 0
 
-CTS_SINK_CLUSTERING_SIZE: 80
+
+
+CTS_SINK_CLUSTERING_SIZE: 90
+
 #256
+
 CTS_SINK_CLUSTERING_MAX_DIAMETER: 120
+
 #512
+
 # Margins.
+
 TOP_MARGIN_MULT: 2
+
 BOTTOM_MARGIN_MULT: 2
+
 LEFT_MARGIN_MULT: 2
+
 RIGHT_MARGIN_MULT: 2
+
 # Area-first synthesis (the counter is tiny, we do not need effort).
+
 SYNTH_STRATEGY: "AREA 3"
+
 #"AREA 1" #estaba originalmente en area 2
 
-# Route-routeability knob for very small designs.
-GRT_ALLOW_CONGESTION: false
 
-# Per-macro DRC / LVS stays enabled; they are cheap on a block this
-# small and give a green baseline before integration.
+
+# Route-routeability knob for very small designs.
+
+GRT_ALLOW_CONGESTION: false

@@ -7,3 +7,6 @@ final/
 img/
 *.lyrdb
 .ipynb_checkpoints/
+*.zip
+*.odb
+*.mag
