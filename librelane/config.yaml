@@ -1,0 +1,246 @@
+meta:
+  version: 3
+  flow: Chip
+  substituting_steps:
+
+    # Disable KLayout DRC
+    #KLayout.DRC: null
+    #Checker.KLayoutDRC: null
+
+    # Disable KLayout antenna check
+    #KLayout.Antenna: null
+    #Checker.KLayoutAntenna: null
+
+    # Disable KLayout density check
+    #KLayout.Density: null
+    #Checker.KLayoutDensity: null
+
+    # Save time during development
+    # Enable for sign-off
+    #OpenROAD.IRDropReport: null
+    #Magic.DRC: null
+    #Checker.MagicDRC: null
+    #KLayout.XOR: null
+    #Netgen.LVS: null
+    #Checker.LVS: null
+
+DESIGN_NAME: chip_top
+VERILOG_FILES:
+- dir::../src/chip_top.sv
+- dir::../src/chip_core.sv
+
+# Enable plugin for better SystemVerilog support
+# USE_SLANG: True
+# SLANG_ARGUMENTS: ['--keep-hierarchy']
+
+# Slightly smaller file sizes
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+# SDC files
+PNR_SDC_FILE: dir::chip_top.sdc
+SIGNOFF_SDC_FILE: dir::chip_top.sdc
+FALLBACK_SDC: dir::chip_top.sdc
+
+# Power / ground nets
+VDD_NETS:
+- VDD
+GND_NETS:
+- VSS
+
+# We need to add gf180mcu_fd_io__bi_24t
+# due to the unused Y output for output only pads
+IGNORE_DISCONNECTED_MODULES:
+- gf180mcu_fd_io__bi_24t
+- gf180mcu_ws_ip__id
+- gf180mcu_ws_ip__logo
+
+# Clock
+CLOCK_PORT: clk_PAD
+CLOCK_NET: clk_pad/Y
+CLOCK_PERIOD: 50 # 50 MHz
+
+
+ROUTING_CORES: 12              # Hilos para el Ruteador Detallado (TritonRoute)
+KLAYOUT_DRC_THREADS: 12
+KLAYOUT_DENSITY_THREADS: 12
+KLAYOUT_XOR_THREADS: 12
+DRT_THREADS: 12
+STA_THREADS: 12
+
+
+
+# Fix hold violations
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
+GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
+PL_RESIZER_SETUP_SLACK_MARGIN: 4
+GRT_RESIZER_SETUP_SLACK_MARGIN: 2
+
+# Increase for more logic
+# on your die
+PL_TARGET_DENSITY_PCT: 35
+GRT_ALLOW_CONGESTION: true
+
+# Fix antenna violations after DRT
+DRT_ANTENNA_REPAIR_ITERS: 10
+DRT_ANTENNA_REPAIR_MARGIN: 10 # %
+
+# PDN - Straps
+PDN_VWIDTH: 5
+PDN_HWIDTH: 5
+PDN_VSPACING: 1
+PDN_HSPACING: 1
+PDN_VPITCH: 75
+PDN_HPITCH: 75
+
+# PDN - Core ring
+PDN_CORE_RING: True
+# Maximum metal width without slotting: 30um
+PDN_CORE_RING_VWIDTH: 25
+PDN_CORE_RING_HWIDTH: 25
+PDN_CORE_RING_CONNECT_TO_PADS: True
+PDN_ENABLE_PINS: False
+PDN_CORE_VERTICAL_LAYER: Metal2
+PDN_CORE_HORIZONTAL_LAYER: Metal3
+
+# Due to OpenROAD bug
+# https://github.com/The-OpenROAD-Project/OpenROAD/issues/8229
+#PL_TIME_DRIVEN: False
+#PL_ROUTABILITY_DRIVEN: False
+
+# Do not error on magic DRC violations
+# Note: Passing magic DRC is not required for the submission.
+# However, it is recommended to fix or carefully review all violations.
+ERROR_ON_MAGIC_DRC: False
+
+# Prevent false positive DRC errors in I/O cells
+MAGIC_GDS_FLATGLOB:
+# For contacts
+- "*_CDNS_*"
+# Foundry provided SRAMs
+- "*$$*"
+- "M1_N*"
+- "M1_P*"
+- "M2_M1*"
+- "M3_M2*"
+- "nmos_5p0*"
+- "nmos_1p2*"
+- "pmos_5p0*"
+- "pmos_1p2*"
+- "via1_*"
+- "ypass_gate*"
+- "G_ring_*"
+# These additional cells must be flattened to get rid of 3.3V devices
+# (DUALGATE drawn into high-level cells)
+- "dcap_103*"
+- "din_*"
+- "mux821_*"
+- "rdummy_*"
+- "pmoscap_*"
+- "xdec_*"
+- "ypredec*"
+- "xpredec*"
+- "prexdec_*"
+- "xdec8_*"
+- "xdec16_*"
+- "xdec32_*"
+- "sa_*"
+
+# Since we cannot meet the minimum density limit on Metal2,
+# ignore active metal on previous and subsequent layers
+# (DM.5_DM.7 and DM.4_DM.6). Dummy metal is moved to active
+# metal during the precheck.
+KLAYOUT_FILLER_OPTIONS:
+  Metal2_ignore_active: true
+
+# Because we have multiple power pads for one power domain
+MAGIC_EXT_UNIQUE: notopports
+
+
+STA_MACRO_PRIORITIZE_NL: true
+
+MACROS:
+  gf180mcu_ws_ip__id:
+    gds:
+      - dir::../ip/gf180mcu_ws_ip__id/gds/gf180mcu_ws_ip__id.gds
+    lef:
+      - dir::../ip/gf180mcu_ws_ip__id/lef/gf180mcu_ws_ip__id.lef
+    vh:
+      - dir::../ip/gf180mcu_ws_ip__id/vh/gf180mcu_ws_ip__id.v
+    lib:
+      "*":
+        - dir::../ip/gf180mcu_ws_ip__id/lib/gf180mcu_ws_ip__id.lib
+    instances:
+      chip_id:
+        location: [26, 26]
+        orientation: N
+
+  gf180mcu_ws_ip__logo:
+    gds:
+      - dir::../ip/gf180mcu_ws_ip__logo/gds/gf180mcu_ws_ip__logo.gds
+    lef:
+      - dir::../ip/gf180mcu_ws_ip__logo/lef/gf180mcu_ws_ip__logo.lef
+    vh:
+      - dir::../ip/gf180mcu_ws_ip__logo/vh/gf180mcu_ws_ip__logo.v
+    lib:
+      "*":
+        - dir::../ip/gf180mcu_ws_ip__logo/lib/gf180mcu_ws_ip__logo.lib
+    instances:
+      wafer_space_logo:
+        location: ["expr::$DIE_AREA[2] + -169.25", "expr::$DIE_AREA[3] + -169.25"]
+        orientation: N
+
+
+  con32_one_instruction:
+    gds:
+      - dir::build/con32_one_instruction/gds/con32_one_instruction.gds
+    lef:
+      - dir::build/con32_one_instruction/lef/con32_one_instruction.lef
+    vh:
+      - dir::build/con32_one_instruction/vh/con32_one_instruction.vh
+    nl:
+      - dir::build/con32_one_instruction/nl/con32_one_instruction.nl.v
+    lib:
+      nom_tt_025C_5v00:
+      - dir::build/con32_one_instruction/lib/nom_tt_025C_5v00/con32_one_instruction__nom_tt_025C_5v00.lib
+      nom_ss_125C_4v50:
+      - dir::build/con32_one_instruction/lib/nom_ss_125C_4v50/con32_one_instruction__nom_ss_125C_4v50.lib
+      nom_ff_n40C_5v50:
+      - dir::build/con32_one_instruction/lib/nom_ff_n40C_5v50/con32_one_instruction__nom_ff_n40C_5v50.lib
+      min_tt_025C_5v00:
+      - dir::build/con32_one_instruction/lib/min_tt_025C_5v00/con32_one_instruction__min_tt_025C_5v00.lib
+      min_ss_125C_4v50:
+      - dir::build/con32_one_instruction/lib/min_ss_125C_4v50/con32_one_instruction__min_ss_125C_4v50.lib
+      min_ff_n40C_5v50:
+      - dir::build/con32_one_instruction/lib/min_ff_n40C_5v50/con32_one_instruction__min_ff_n40C_5v50.lib
+      max_tt_025C_5v00:
+      - dir::build/con32_one_instruction/lib/max_tt_025C_5v00/con32_one_instruction__max_tt_025C_5v00.lib
+      max_ss_125C_4v50:
+      - dir::build/con32_one_instruction/lib/max_ss_125C_4v50/con32_one_instruction__max_ss_125C_4v50.lib
+      max_ff_n40C_5v50:
+      - dir::build/con32_one_instruction/lib/max_ff_n40C_5v50/con32_one_instruction__max_ff_n40C_5v50.lib
+    spef:
+      min:
+      - dir::build/con32_one_instruction/spef/min/con32_one_instruction.min.spef
+      nom:
+      - dir::build/con32_one_instruction/spef/nom/con32_one_instruction.nom.spef
+      max:
+      - dir::build/con32_one_instruction/spef/max/con32_one_instruction.max.spef
+    instances:
+      # Ajusta el nombre de la instancia según esté declarada en chip_core.sv
+      # y sus coordenadas [X, Y] dentro del área útil del core
+      i_chip_core.con32_one_instruction_u:
+        location: [700, 2400]
+        orientation: N
+
+# Conexión de alimentación para el macro
+
+PDN_MACRO_CONNECTIONS:
+- i_chip_core.con32_one_instruction_u VDD VSS VDD VSS
+# Halo size around macros while cutting rows.
+# Workaround for: https://github.com/The-OpenROAD-Project/OpenROAD/issues/8868
+FP_MACRO_HORIZONTAL_HALO: 10
+FP_MACRO_VERTICAL_HALO: 10
+PDN_HORIZONTAL_HALO: 5
+PDN_VERTICAL_HALO: 5
+
+PDN_CFG: dir::pdn_cfg.tcl

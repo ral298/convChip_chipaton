@@ -1,0 +1,50 @@
+# ==============================================================================
+# Variables Base de Entorno
+# ==============================================================================
+TOPLEVEL_LANG ?= verilog
+SIM           ?= icarus
+RTL            = $(PWD)/../rtl
+BUILD          = $(PWD)/../build
+
+# Ruta a los modelos Verilog del PDK (definida por el entorno del Chipathon)
+PDK_VLOG      ?= $(PDK_ROOT)/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog
+
+# ==============================================================================
+# Lista Completa de Fuentes RTL para tu Diseño con32
+# ==============================================================================
+CON32_SOURCES = $(PWD)/tb.v \
+                $(RTL)/con32_one_instruction.v \
+                $(RTL)/acti.v \
+                $(RTL)/con32bits_parall.v \
+                $(RTL)/four_palabras_uart.v \
+                $(RTL)/mult_16b_bf.v \
+                $(RTL)/punt_mo_seg.v \
+                $(RTL)/salida.v \
+                $(RTL)/suma_16b.v \
+                $(RTL)/uart_tx_4in4.v \
+                $(RTL)/uart_ultimo.v
+
+# ==============================================================================
+# Target para simulación RTL (Pre-Síntesis) a 50 MHz
+# ==============================================================================
+test-con32:
+	    $(MAKE) -f Makefile.cocotb \
+	    TOPLEVEL=con32_one_instruction \
+	    MODULE=test_con32_cocotb \
+	    VERILOG_SOURCES="$(CON32_SOURCES)" \
+	    SIM_BUILD=sim_build_con32_rtl
+
+# ==============================================================================
+# Target para simulación Gate-Level (GL / Post-Síntesis) a 50 MHz
+# ==============================================================================
+test-con32-gl:
+	    $(MAKE) -f Makefile.cocotb \
+	    TOPLEVEL=tb \
+	    MODULE=test_con32_cocotb \
+	    COMPILE_ARGS="-g2012 -DFUNCTIONAL -DUNIT_DELAY=\#1 -DUSE_POWER_PINS" \
+	    VERILOG_SOURCES="timescale.v $(PDK_VLOG)/primitives.v $(PDK_VLOG)/gf180mcu_fd_sc_mcu7t5v0.v ../build/chip_top/final/pnl/chip_top.pnl.v" \
+	    SIM_BUILD=sim_build_con32_gl
+	    
+clean:
+	rm -rf sim_build sim_build_con32_rtl \
+	       sim_build_con32_gl  results.xml
