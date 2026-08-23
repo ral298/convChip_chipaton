@@ -1,0 +1,1897 @@
+(DELAYFILE
+ (SDFVERSION "3.0")
+ (DESIGN "chip_top")
+ (DATE "Sun Aug 23 20:05:26 2026")
+ (VENDOR "Parallax")
+ (PROGRAM "STA")
+ (VERSION "2.7.0")
+ (DIVIDER .)
+ (TIMESCALE 1ns)
+ (CELL
+  (CELLTYPE "chip_top")
+  (INSTANCE)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT clk_PAD clk_pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT rst_n_PAD rst_n_pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT analog_PAD[1] analog\[1\]\.pad.ASIG5V (0.000:0.000:0.000))
+    (INTERCONNECT analog_PAD[0] analog\[0\]\.pad.ASIG5V (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[39] bidir\[39\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[38] bidir\[38\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[37] bidir\[37\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[36] bidir\[36\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[35] bidir\[35\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[34] bidir\[34\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[33] bidir\[33\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[32] bidir\[32\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[31] bidir\[31\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[30] bidir\[30\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[29] bidir\[29\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[28] bidir\[28\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[27] bidir\[27\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[26] bidir\[26\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[25] bidir\[25\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[24] bidir\[24\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[23] bidir\[23\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[22] bidir\[22\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[21] bidir\[21\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[20] bidir\[20\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[19] bidir\[19\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[18] bidir\[18\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[17] bidir\[17\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[16] bidir\[16\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[15] bidir\[15\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[14] bidir\[14\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[13] bidir\[13\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[12] bidir\[12\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[11] bidir\[11\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[10] bidir\[10\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[9] bidir\[9\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[8] bidir\[8\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[7] bidir\[7\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[6] bidir\[6\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[5] bidir\[5\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[4] bidir\[4\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[3] bidir\[3\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[2] bidir\[2\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[1] bidir\[1\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT bidir_PAD[0] bidir\[0\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[11] inputs\[11\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[10] inputs\[10\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[9] inputs\[9\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[8] inputs\[8\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[7] inputs\[7\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[6] inputs\[6\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[5] inputs\[5\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[4] inputs\[4\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[3] inputs\[3\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[2] inputs\[2\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[1] inputs\[1\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT input_PAD[0] inputs\[0\]\.pad.PAD (0.000:0.000:0.000))
+    (INTERCONNECT analog\[0\]\.pad.ASIG5V analog_PAD[0] (0.000:0.000:0.000))
+    (INTERCONNECT analog\[1\]\.pad.ASIG5V analog_PAD[1] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad.PAD bidir_PAD[0] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad.Y hold324.I (0.002:0.002:0.002) (0.002:0.002:0.002))
+    (INTERCONNECT bidir\[0\]\.pad_208.ZN bidir\[0\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad_209.ZN bidir\[0\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad_210.ZN bidir\[0\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad_211.ZN bidir\[0\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad_212.ZN bidir\[0\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad_213.Z bidir\[0\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[0\]\.pad_323.Z bidir\[0\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad.PAD bidir_PAD[10] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad_20.ZN bidir\[10\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad_21.ZN bidir\[10\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad_214.Z bidir\[10\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad_215.Z bidir\[10\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad_216.Z bidir\[10\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad_22.ZN bidir\[10\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[10\]\.pad_23.ZN bidir\[10\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad.PAD bidir_PAD[11] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad_217.Z bidir\[11\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad_218.Z bidir\[11\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad_219.Z bidir\[11\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad_24.ZN bidir\[11\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad_25.ZN bidir\[11\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad_26.ZN bidir\[11\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[11\]\.pad_27.ZN bidir\[11\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad.PAD bidir_PAD[12] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad_220.Z bidir\[12\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad_221.Z bidir\[12\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad_222.Z bidir\[12\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad_28.ZN bidir\[12\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad_29.ZN bidir\[12\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad_30.ZN bidir\[12\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[12\]\.pad_31.ZN bidir\[12\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad.PAD bidir_PAD[13] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad_223.Z bidir\[13\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad_224.Z bidir\[13\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad_225.Z bidir\[13\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad_32.ZN bidir\[13\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad_33.ZN bidir\[13\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad_34.ZN bidir\[13\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[13\]\.pad_35.ZN bidir\[13\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad.PAD bidir_PAD[14] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad_226.Z bidir\[14\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad_227.Z bidir\[14\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad_228.Z bidir\[14\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad_36.ZN bidir\[14\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad_37.ZN bidir\[14\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad_38.ZN bidir\[14\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[14\]\.pad_39.ZN bidir\[14\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad.PAD bidir_PAD[15] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad_229.Z bidir\[15\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad_230.Z bidir\[15\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad_231.Z bidir\[15\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad_40.ZN bidir\[15\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad_41.ZN bidir\[15\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad_42.ZN bidir\[15\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[15\]\.pad_43.ZN bidir\[15\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad.PAD bidir_PAD[16] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad_232.Z bidir\[16\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad_233.Z bidir\[16\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad_234.Z bidir\[16\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad_44.ZN bidir\[16\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad_45.ZN bidir\[16\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad_46.ZN bidir\[16\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[16\]\.pad_47.ZN bidir\[16\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad.PAD bidir_PAD[17] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad_235.Z bidir\[17\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad_236.Z bidir\[17\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad_237.Z bidir\[17\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad_48.ZN bidir\[17\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad_49.ZN bidir\[17\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad_50.ZN bidir\[17\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[17\]\.pad_51.ZN bidir\[17\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad.PAD bidir_PAD[18] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad_238.Z bidir\[18\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad_239.Z bidir\[18\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad_240.Z bidir\[18\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad_52.ZN bidir\[18\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad_53.ZN bidir\[18\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad_54.ZN bidir\[18\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[18\]\.pad_55.ZN bidir\[18\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad.PAD bidir_PAD[19] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad_241.Z bidir\[19\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad_242.Z bidir\[19\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad_243.Z bidir\[19\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad_56.ZN bidir\[19\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad_57.ZN bidir\[19\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad_58.ZN bidir\[19\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[19\]\.pad_59.ZN bidir\[19\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[1\]\.pad.PAD bidir_PAD[1] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[1\]\.pad_244.Z bidir\[1\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[1\]\.pad_60.ZN bidir\[1\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[1\]\.pad_61.ZN bidir\[1\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[1\]\.pad_62.ZN bidir\[1\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[1\]\.pad_63.ZN bidir\[1\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[1\]\.pad_64.ZN bidir\[1\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad.PAD bidir_PAD[20] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad_245.Z bidir\[20\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad_246.Z bidir\[20\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad_247.Z bidir\[20\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad_65.ZN bidir\[20\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad_66.ZN bidir\[20\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad_67.ZN bidir\[20\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[20\]\.pad_68.ZN bidir\[20\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad.PAD bidir_PAD[21] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad_248.Z bidir\[21\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad_249.Z bidir\[21\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad_250.Z bidir\[21\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad_69.ZN bidir\[21\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad_70.ZN bidir\[21\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad_71.ZN bidir\[21\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[21\]\.pad_72.ZN bidir\[21\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad.PAD bidir_PAD[22] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad_251.Z bidir\[22\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad_252.Z bidir\[22\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad_253.Z bidir\[22\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad_73.ZN bidir\[22\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad_74.ZN bidir\[22\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad_75.ZN bidir\[22\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[22\]\.pad_76.ZN bidir\[22\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad.PAD bidir_PAD[23] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad_254.Z bidir\[23\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad_255.Z bidir\[23\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad_256.Z bidir\[23\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad_77.ZN bidir\[23\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad_78.ZN bidir\[23\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad_79.ZN bidir\[23\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[23\]\.pad_80.ZN bidir\[23\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad.PAD bidir_PAD[24] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad_257.Z bidir\[24\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad_258.Z bidir\[24\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad_259.Z bidir\[24\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad_81.ZN bidir\[24\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad_82.ZN bidir\[24\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad_83.ZN bidir\[24\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[24\]\.pad_84.ZN bidir\[24\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad.PAD bidir_PAD[25] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad_260.Z bidir\[25\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad_261.Z bidir\[25\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad_262.Z bidir\[25\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad_85.ZN bidir\[25\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad_86.ZN bidir\[25\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad_87.ZN bidir\[25\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[25\]\.pad_88.ZN bidir\[25\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad.PAD bidir_PAD[26] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad_263.Z bidir\[26\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad_264.Z bidir\[26\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad_265.Z bidir\[26\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad_89.ZN bidir\[26\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad_90.ZN bidir\[26\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad_91.ZN bidir\[26\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[26\]\.pad_92.ZN bidir\[26\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad.PAD bidir_PAD[27] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad_266.Z bidir\[27\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad_267.Z bidir\[27\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad_268.Z bidir\[27\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad_93.ZN bidir\[27\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad_94.ZN bidir\[27\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad_95.ZN bidir\[27\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[27\]\.pad_96.ZN bidir\[27\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad.PAD bidir_PAD[28] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad_100.ZN bidir\[28\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad_269.Z bidir\[28\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad_270.Z bidir\[28\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad_271.Z bidir\[28\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad_97.ZN bidir\[28\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad_98.ZN bidir\[28\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[28\]\.pad_99.ZN bidir\[28\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad.PAD bidir_PAD[29] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad_101.ZN bidir\[29\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad_102.ZN bidir\[29\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad_103.ZN bidir\[29\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad_104.ZN bidir\[29\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad_272.Z bidir\[29\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad_273.Z bidir\[29\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[29\]\.pad_274.Z bidir\[29\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[2\]\.pad.PAD bidir_PAD[2] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[2\]\.pad_105.ZN bidir\[2\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[2\]\.pad_106.ZN bidir\[2\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[2\]\.pad_107.ZN bidir\[2\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[2\]\.pad_108.ZN bidir\[2\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[2\]\.pad_109.ZN bidir\[2\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[2\]\.pad_275.Z bidir\[2\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad.PAD bidir_PAD[30] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad_110.ZN bidir\[30\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad_111.ZN bidir\[30\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad_112.ZN bidir\[30\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad_113.ZN bidir\[30\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad_276.Z bidir\[30\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad_277.Z bidir\[30\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[30\]\.pad_278.Z bidir\[30\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad.PAD bidir_PAD[31] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad_114.ZN bidir\[31\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad_115.ZN bidir\[31\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad_116.ZN bidir\[31\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad_117.ZN bidir\[31\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad_279.Z bidir\[31\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad_280.Z bidir\[31\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[31\]\.pad_281.Z bidir\[31\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad.PAD bidir_PAD[32] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad_118.ZN bidir\[32\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad_119.ZN bidir\[32\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad_120.ZN bidir\[32\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad_121.ZN bidir\[32\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad_282.Z bidir\[32\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad_283.Z bidir\[32\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[32\]\.pad_284.Z bidir\[32\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad.PAD bidir_PAD[33] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad_122.ZN bidir\[33\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad_123.ZN bidir\[33\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad_124.ZN bidir\[33\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad_125.ZN bidir\[33\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad_285.Z bidir\[33\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad_286.Z bidir\[33\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[33\]\.pad_287.Z bidir\[33\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad.PAD bidir_PAD[34] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad_126.ZN bidir\[34\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad_127.ZN bidir\[34\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad_128.ZN bidir\[34\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad_129.ZN bidir\[34\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad_288.Z bidir\[34\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad_289.Z bidir\[34\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[34\]\.pad_290.Z bidir\[34\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad.PAD bidir_PAD[35] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad_130.ZN bidir\[35\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad_131.ZN bidir\[35\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad_132.ZN bidir\[35\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad_133.ZN bidir\[35\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad_291.Z bidir\[35\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad_292.Z bidir\[35\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[35\]\.pad_293.Z bidir\[35\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad.PAD bidir_PAD[36] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad_134.ZN bidir\[36\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad_135.ZN bidir\[36\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad_136.ZN bidir\[36\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad_137.ZN bidir\[36\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad_294.Z bidir\[36\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad_295.Z bidir\[36\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[36\]\.pad_296.Z bidir\[36\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad.PAD bidir_PAD[37] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad_138.ZN bidir\[37\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad_139.ZN bidir\[37\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad_140.ZN bidir\[37\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad_141.ZN bidir\[37\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad_297.Z bidir\[37\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad_298.Z bidir\[37\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[37\]\.pad_299.Z bidir\[37\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad.PAD bidir_PAD[38] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad_142.ZN bidir\[38\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad_143.ZN bidir\[38\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad_144.ZN bidir\[38\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad_145.ZN bidir\[38\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad_300.Z bidir\[38\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad_301.Z bidir\[38\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[38\]\.pad_302.Z bidir\[38\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad.PAD bidir_PAD[39] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad_146.ZN bidir\[39\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad_147.ZN bidir\[39\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad_148.ZN bidir\[39\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad_149.ZN bidir\[39\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad_303.Z bidir\[39\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad_304.Z bidir\[39\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[39\]\.pad_305.Z bidir\[39\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[3\]\.pad.PAD bidir_PAD[3] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[3\]\.pad_150.ZN bidir\[3\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[3\]\.pad_151.ZN bidir\[3\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[3\]\.pad_152.ZN bidir\[3\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[3\]\.pad_153.ZN bidir\[3\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[3\]\.pad_154.ZN bidir\[3\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[3\]\.pad_306.Z bidir\[3\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[4\]\.pad.PAD bidir_PAD[4] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[4\]\.pad_155.ZN bidir\[4\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[4\]\.pad_156.ZN bidir\[4\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[4\]\.pad_157.ZN bidir\[4\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[4\]\.pad_158.ZN bidir\[4\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[4\]\.pad_159.ZN bidir\[4\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[4\]\.pad_307.Z bidir\[4\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad.PAD bidir_PAD[5] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad_160.ZN bidir\[5\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad_161.ZN bidir\[5\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad_162.ZN bidir\[5\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad_163.ZN bidir\[5\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad_308.Z bidir\[5\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad_309.Z bidir\[5\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[5\]\.pad_310.Z bidir\[5\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad.PAD bidir_PAD[6] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad_164.ZN bidir\[6\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad_165.ZN bidir\[6\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad_166.ZN bidir\[6\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad_167.ZN bidir\[6\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad_311.Z bidir\[6\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad_312.Z bidir\[6\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[6\]\.pad_313.Z bidir\[6\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad.PAD bidir_PAD[7] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad_168.ZN bidir\[7\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad_169.ZN bidir\[7\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad_170.ZN bidir\[7\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad_171.ZN bidir\[7\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad_314.Z bidir\[7\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad_315.Z bidir\[7\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[7\]\.pad_316.Z bidir\[7\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad.PAD bidir_PAD[8] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad_172.ZN bidir\[8\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad_173.ZN bidir\[8\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad_174.ZN bidir\[8\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad_175.ZN bidir\[8\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad_317.Z bidir\[8\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad_318.Z bidir\[8\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[8\]\.pad_319.Z bidir\[8\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad.PAD bidir_PAD[9] (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad_176.ZN bidir\[9\]\.pad.CS (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad_177.ZN bidir\[9\]\.pad.IE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad_178.ZN bidir\[9\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad_179.ZN bidir\[9\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad_320.Z bidir\[9\]\.pad.A (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad_321.Z bidir\[9\]\.pad.OE (0.000:0.000:0.000))
+    (INTERCONNECT bidir\[9\]\.pad_322.Z bidir\[9\]\.pad.SL (0.000:0.000:0.000))
+    (INTERCONNECT clk_pad.Y i_chip_core\.con32_one_instruction_u.clk_ref (0.200:0.200:0.200) (0.199:0.199:0.199))
+    (INTERCONNECT clk_pad_180.ZN clk_pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT clk_pad_181.ZN clk_pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT hold324.Z wire19.I (0.003:0.003:0.003) (0.003:0.003:0.003))
+    (INTERCONNECT i_chip_core\.con32_one_instruction_u.rx_sample_pulse wire12.I (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT i_chip_core\.con32_one_instruction_u.rxd_out wire10.I (0.011:0.011:0.011) (0.011:0.011:0.011))
+    (INTERCONNECT i_chip_core\.con32_one_instruction_u.tx_busy wire6.I (0.013:0.013:0.013) (0.013:0.013:0.013))
+    (INTERCONNECT i_chip_core\.con32_one_instruction_u.txd wire4.I (0.003:0.003:0.003) (0.003:0.003:0.003))
+    (INTERCONNECT inputs\[0\]\.pad_182.ZN inputs\[0\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[0\]\.pad_183.ZN inputs\[0\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[10\]\.pad_184.ZN inputs\[10\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[10\]\.pad_185.ZN inputs\[10\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[11\]\.pad_186.ZN inputs\[11\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[11\]\.pad_187.ZN inputs\[11\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[1\]\.pad_188.ZN inputs\[1\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[1\]\.pad_189.ZN inputs\[1\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[2\]\.pad_190.ZN inputs\[2\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[2\]\.pad_191.ZN inputs\[2\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[3\]\.pad_192.ZN inputs\[3\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[3\]\.pad_193.ZN inputs\[3\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[4\]\.pad_194.ZN inputs\[4\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[4\]\.pad_195.ZN inputs\[4\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[5\]\.pad_196.ZN inputs\[5\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[5\]\.pad_197.ZN inputs\[5\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[6\]\.pad_198.ZN inputs\[6\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[6\]\.pad_199.ZN inputs\[6\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[7\]\.pad_200.ZN inputs\[7\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[7\]\.pad_201.ZN inputs\[7\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[8\]\.pad_202.ZN inputs\[8\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[8\]\.pad_203.ZN inputs\[8\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[9\]\.pad_204.ZN inputs\[9\]\.pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT inputs\[9\]\.pad_205.ZN inputs\[9\]\.pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT rst_n_pad.Y wire16.I (0.005:0.005:0.005) (0.005:0.005:0.005))
+    (INTERCONNECT rst_n_pad_206.ZN rst_n_pad.PD (0.000:0.000:0.000))
+    (INTERCONNECT rst_n_pad_207.ZN rst_n_pad.PU (0.000:0.000:0.000))
+    (INTERCONNECT wire1.Z bidir\[1\]\.pad.A (0.016:0.016:0.016) (0.016:0.016:0.016))
+    (INTERCONNECT wire10.Z wire9.I (0.044:0.044:0.044) (0.043:0.043:0.043))
+    (INTERCONNECT wire11.Z bidir\[4\]\.pad.A (0.016:0.016:0.016) (0.015:0.015:0.016))
+    (INTERCONNECT wire12.Z wire11.I (0.017:0.017:0.017) (0.017:0.017:0.017))
+    (INTERCONNECT wire13.Z i_chip_core\.con32_one_instruction_u.rst (0.037:0.037:0.037) (0.036:0.036:0.036))
+    (INTERCONNECT wire14.Z wire13.I (0.029:0.029:0.029) (0.028:0.028:0.028))
+    (INTERCONNECT wire15.Z wire14.I (0.018:0.018:0.018) (0.018:0.018:0.018))
+    (INTERCONNECT wire16.Z wire15.I (0.017:0.017:0.017) (0.016:0.016:0.016))
+    (INTERCONNECT wire17.Z i_chip_core\.con32_one_instruction_u.rxd (0.028:0.028:0.028) (0.027:0.027:0.027))
+    (INTERCONNECT wire18.Z wire17.I (0.028:0.028:0.028) (0.027:0.027:0.027))
+    (INTERCONNECT wire19.Z wire18.I (0.017:0.017:0.017) (0.017:0.017:0.017))
+    (INTERCONNECT wire2.Z wire1.I (0.016:0.016:0.016) (0.016:0.016:0.016))
+    (INTERCONNECT wire3.Z wire2.I (0.017:0.017:0.017) (0.017:0.017:0.017))
+    (INTERCONNECT wire4.Z wire3.I (0.026:0.026:0.026) (0.026:0.026:0.026))
+    (INTERCONNECT wire5.Z bidir\[3\]\.pad.A (0.015:0.015:0.015) (0.015:0.015:0.015))
+    (INTERCONNECT wire6.Z wire5.I (0.016:0.016:0.016) (0.016:0.016:0.016))
+    (INTERCONNECT wire7.Z bidir\[2\]\.pad.A (0.015:0.015:0.015) (0.015:0.015:0.015))
+    (INTERCONNECT wire8.Z wire7.I (0.017:0.017:0.017) (0.016:0.016:0.016))
+    (INTERCONNECT wire9.Z wire8.I (0.013:0.013:0.013) (0.013:0.013:0.013))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[0\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.990:0.990:0.990) (0.849:0.849:0.849)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[10\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[11\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[12\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[13\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[14\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[15\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[16\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[17\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[18\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[19\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[1\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (1.858:1.858:1.858) (1.921:1.921:1.921)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[20\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[21\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[22\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[23\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[24\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[25\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[26\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[27\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[28\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[29\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[2\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (1.859:1.859:1.859) (1.921:1.921:1.922)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[30\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[31\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[32\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[33\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[34\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[35\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[36\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[37\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[38\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[39\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[3\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (1.858:1.858:1.858) (1.920:1.920:1.921)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[4\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (1.859:1.859:1.859) (1.921:1.922:1.922)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[5\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[6\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[7\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[8\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__bi_24t")
+  (INSTANCE bidir\[9\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (COND CS==1'b1&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&OE==1'b0&&PAD==1'b1
+     (IOPATH IE Y (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b0&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD () (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b1
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND A==1'b1&&IE==1'b0&&SL==1'b0
+     (IOPATH OE PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b1
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND IE==1'b0&&OE==1'b1&&SL==1'b0
+     (IOPATH A PAD (0.000:0.000:0.000)))
+    (COND CS==1'b1&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+    (COND CS==1'b0&&IE==1'b1&&OE==1'b0
+     (IOPATH PAD Y (0.000:0.000:0.000)))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_s")
+  (INSTANCE clk_pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (1.266:1.266:1.266) (1.478:1.478:1.478))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyc_1")
+  (INSTANCE hold324)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (1.976:1.976:1.976) (2.016:2.016:2.016))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "con32_one_instruction")
+  (INSTANCE i_chip_core\.con32_one_instruction_u)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH clk_ref txd (4.737:4.737:4.737) (4.702:4.702:4.702))
+    (IOPATH clk_ref tx_busy (5.738:5.738:5.738) (5.442:5.442:5.442))
+    (IOPATH clk_ref rxd_out (3.816:3.816:3.816) (3.781:3.781:3.781))
+    (IOPATH clk_ref rx_sample_pulse (5.452:5.452:5.452) (5.196:5.196:5.196))
+   )
+  )
+  (TIMINGCHECK
+    (SETUP (posedge rxd) (posedge clk_ref) (-0.319:-0.319:-0.319))
+    (SETUP (negedge rxd) (posedge clk_ref) (-0.439:-0.439:-0.439))
+    (HOLD (posedge rxd) (posedge clk_ref) (0.672:0.672:0.672))
+    (HOLD (negedge rxd) (posedge clk_ref) (0.927:0.927:0.927))
+    (SETUP (posedge rst) (posedge clk_ref) (11.478:11.478:11.478))
+    (SETUP (negedge rst) (posedge clk_ref) (11.337:11.337:11.337))
+    (HOLD (posedge rst) (posedge clk_ref) (-0.844:-0.844:-0.844))
+    (HOLD (negedge rst) (posedge clk_ref) (-7.708:-7.708:-7.708))
+    (SETUP (posedge rst) (negedge clk_ref) (6.606:6.606:6.606))
+    (HOLD (posedge rst) (negedge clk_ref) (-4.146:-4.146:-4.146))
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[0\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[10\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[11\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[1\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[2\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[3\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[4\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[5\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[6\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[7\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[8\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE inputs\[9\]\.pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (0.951:0.951:0.951) (0.812:0.812:0.812))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_io__in_c")
+  (INSTANCE rst_n_pad)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH PAD Y (1.061:1.061:1.061) (0.969:0.969:0.969))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire1)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.267:0.267:0.267) (0.261:0.261:0.262))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire10)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.366:0.366:0.366) (0.458:0.458:0.458))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire11)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.281:0.281:0.281) (0.278:0.279:0.279))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire12)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.304:0.304:0.304) (0.395:0.395:0.395))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire13)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.257:0.257:0.257) (0.258:0.258:0.258))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire14)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.252:0.252:0.252) (0.251:0.251:0.251))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire15)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.246:0.246:0.246) (0.253:0.253:0.253))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire16)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.277:0.277:0.277) (0.269:0.269:0.269))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire17)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.254:0.254:0.254) (0.257:0.257:0.257))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire18)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.255:0.255:0.255) (0.260:0.260:0.260))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire19)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.318:0.318:0.318) (0.397:0.397:0.397))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire2)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.227:0.227:0.227) (0.235:0.235:0.235))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire3)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.248:0.248:0.248) (0.262:0.262:0.262))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire4)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.328:0.328:0.328) (0.372:0.372:0.372))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire5)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.268:0.268:0.268) (0.267:0.267:0.268))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire6)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.278:0.278:0.278) (0.435:0.435:0.435))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_8")
+  (INSTANCE wire7)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.270:0.270:0.270) (0.263:0.264:0.264))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire8)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.226:0.226:0.226) (0.233:0.233:0.233))
+   )
+  )
+ )
+ (CELL
+  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__buf_12")
+  (INSTANCE wire9)
+  (DELAY
+   (ABSOLUTE
+    (IOPATH I Z (0.245:0.245:0.245) (0.269:0.269:0.269))
+   )
+  )
+ )
+)

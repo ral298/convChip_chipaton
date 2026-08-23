@@ -1,0 +1,34 @@
+cocotb/tb/dump_gls.vcd
+
+cocotb/tb/sim_build/gl/sim.vvp
+
+cocotb/sim_build/sim.vvp
+
+
+*.rar
+*.zip
+
+# Excluir archivos mayores a 100 MB de la carpeta final
+final/gds/chip_top.gds
+final/mag/chip_top.mag
+final/mag_gds/chip_top.magic.gds
+
+librelane/acti_macro.yaml                               
+librelane/con32bits_parall_macro.yaml       
+librelane/config_aux.yaml                
+librelane/mult_16b_bf_macro.yaml  
+librelane/suma_16b_macro.yaml
+librelane/con32bits_parall_macro_antes_macro.yaml.back  
+librelane/con32bits_parall_macro.yaml.back  
+librelane/punt_mo_seg_macro.yaml  uart_tx_4in4_macro.yaml
+librelane/con32bits_parall_macro_para_macro.yaml        
+librelane/four_palabras_uart_macro.yaml  
+librelane/salida_macro.yaml       
+librelane/uart_ultimo_macro.yaml
+librelane/punt_mo_seg_macro.yaml
+librelane/uart_tx_4in4_macro.yaml
+
+runs/
+
+
+

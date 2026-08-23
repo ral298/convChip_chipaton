@@ -1,0 +1,228 @@
+OpenROAD 26Q2-254-g61932e897 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+openroad> set CORNER "ss_125C_4v50"
+ss_125C_4v50
+openroad> set PDK_PATH "./gf180mcu/gf180mcuD/libs.ref"
+./gf180mcu/gf180mcuD/libs.ref
+openroad> 
+openroad> # Librerías
+openroad> read_lib "$PDK_PATH/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__${CORNER}.lib"
+1
+openroad> read_lib "$PDK_PATH/gf180mcu_fd_io/lib/gf180mcu_fd_io__${CORNER}.lib"
+1
+openroad> 
+openroad> read_lib "$PDK_PATH/gf180mcu_fd_io/lib/gf180mcu_ws_io__${CORNER}.lib"
+1
+openroad> 
+openroad> # Liberty caracterizada de la Macro
+openroad> read_lib "./librelane/build/con32_one_instruction/lib/max_${CORNER}/con32_one_instruction__max_${CORNER}.lib"
+1
+openroad> 
+openroad> # Top Level Design
+openroad> read_db "./final/odb/chip_top.odb"
+[WARNING ORD-2001] LEF macro gf180mcu_ef_io__bi_t pin ANA missing from liberty cell.
+openroad> read_spef "./final/spef/max/chip_top.max.spef"
+1
+openroad> read_sdc "./final/sdc/chip_top.sdc"
+openroad> 
+openroad> puts "\n========================================================"
+
+========================================================
+openroad> puts "       REPORTE TOP-LEVEL (PADS <-> FRONTERA CORE)       "
+       REPORTE TOP-LEVEL (PADS <-> FRONTERA CORE)       
+openroad> puts "========================================================"
+========================================================
+openroad> report_checks -path_delay min_max -format full_clock_expanded -digits 4
+Startpoint: bidir_PAD[0] (input port clocked by clk_PAD)
+Endpoint: i_chip_core.con32_one_instruction_u
+          (rising edge-triggered flip-flop clocked by clk_PAD)
+Path Group: clk_PAD
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk_PAD (rise edge)
+   0.0000    0.0000   clock network delay (propagated)
+   0.0000    0.0000 v input external delay
+   0.0000    0.0000 v bidir_PAD[0] (inout)
+   1.4882    1.4882 v bidir[0].pad/Y (gf180mcu_fd_io__bi_24t)
+   3.9275    5.4157 v hold324/Z (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)
+   0.7478    6.1635 v wire19/Z (gf180mcu_fd_sc_mcu7t5v0__buf_8)
+   0.5102    6.6737 v wire18/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.5212    7.1949 v wire17/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.0453    7.2402 v i_chip_core.con32_one_instruction_u/rxd (con32_one_instruction)
+             7.2402   data arrival time
+
+   0.0000    0.0000   clock clk_PAD (rise edge)
+   0.0000    0.0000   clock source latency
+   0.0000    0.0000 ^ clk_pad/Y (gf180mcu_fd_io__in_s)
+   0.3260    0.3260 ^ i_chip_core.con32_one_instruction_u/clk_ref (con32_one_instruction)
+   0.2500    0.5760   clock uncertainty
+   0.0000    0.5760   clock reconvergence pessimism
+   1.6255    2.2015   library hold time
+             2.2015   data required time
+-------------------------------------------------------------
+             2.2015   data required time
+            -7.2402   data arrival time
+-------------------------------------------------------------
+             5.0387   slack (MET)
+
+
+Startpoint: rst_n_PAD (input port clocked by clk_PAD)
+Endpoint: i_chip_core.con32_one_instruction_u
+          (rising edge-triggered flip-flop clocked by clk_PAD)
+Path Group: clk_PAD
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk_PAD (rise edge)
+   0.0000    0.0000   clock network delay (propagated)
+   2.0000    2.0000 ^ input external delay
+   0.0000    2.0000 ^ rst_n_PAD (inout)
+   1.8263    3.8263 ^ rst_n_pad/Y (gf180mcu_fd_io__in_c)
+   0.5248    4.3511 ^ wire16/Z (gf180mcu_fd_sc_mcu7t5v0__buf_8)
+   0.4924    4.8435 ^ wire15/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.5059    5.3494 ^ wire14/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.5305    5.8799 ^ wire13/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.0595    5.9393 ^ i_chip_core.con32_one_instruction_u/rst (con32_one_instruction)
+             5.9393   data arrival time
+
+  25.0000   25.0000   clock clk_PAD (fall edge)
+   0.0000   25.0000   clock source latency
+   0.0000   25.0000 v clk_pad/Y (gf180mcu_fd_io__in_s)
+   0.3196   25.3196 v i_chip_core.con32_one_instruction_u/clk_ref (con32_one_instruction)
+  -0.2500   25.0696   clock uncertainty
+   0.0000   25.0696   clock reconvergence pessimism
+ -13.0021   12.0675   library setup time
+            12.0675   data required time
+-------------------------------------------------------------
+            12.0675   data required time
+            -5.9393   data arrival time
+-------------------------------------------------------------
+             6.1282   slack (MET)
+
+
+openroad> report_wns
+wns max 0.00
+openroad> report_tns
+tns max 0.00
+openroad> report_clock_min_period
+clk_PAD period_min = 0.00 fmax = inf
+openroad> exit
+OpenROAD 26Q2-254-g61932e897 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+openroad> set CORNER "ss_125C_4v50"
+ss_125C_4v50
+openroad> set PDK_PATH "./gf180mcu/gf180mcuD/libs.ref"
+./gf180mcu/gf180mcuD/libs.ref
+openroad> 
+openroad> # Librerías
+openroad> read_lib "$PDK_PATH/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__${CORNER}.lib"
+1
+openroad> read_lib "$PDK_PATH/gf180mcu_fd_io/lib/gf180mcu_fd_io__${CORNER}.lib"
+1
+openroad> 
+openroad> read_lib "$PDK_PATH/gf180mcu_fd_io/lib/gf180mcu_ws_io__${CORNER}.lib"
+1
+openroad> 
+openroad> # Liberty caracterizada de la Macro
+openroad> read_lib "./librelane/build/con32_one_instruction/lib/max_${CORNER}/con32_one_instruction__max_${CORNER}.lib"
+1
+openroad> 
+openroad> # Top Level Design
+openroad> read_db "./final/odb/chip_top.odb"
+[WARNING ORD-2001] LEF macro gf180mcu_ef_io__bi_t pin ANA missing from liberty cell.
+openroad> read_spef "./final/spef/max/chip_top.max.spef"
+1
+openroad> read_sdc "./final/sdc/chip_top.sdc"
+openroad> 
+openroad> puts "\n========================================================"
+
+========================================================
+openroad> puts "       REPORTE TOP-LEVEL (PADS <-> FRONTERA CORE)       "
+       REPORTE TOP-LEVEL (PADS <-> FRONTERA CORE)       
+openroad> puts "========================================================"
+========================================================
+openroad> report_checks -path_delay min_max -format full_clock_expanded -digits 4
+Startpoint: bidir_PAD[0] (input port clocked by clk_PAD)
+Endpoint: i_chip_core.con32_one_instruction_u
+          (rising edge-triggered flip-flop clocked by clk_PAD)
+Path Group: clk_PAD
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk_PAD (rise edge)
+   0.0000    0.0000   clock network delay (propagated)
+   0.0000    0.0000 v input external delay
+   0.0000    0.0000 v bidir_PAD[0] (inout)
+   1.4884    1.4884 v bidir[0].pad/Y (gf180mcu_fd_io__bi_24t)
+   3.9274    5.4159 v hold324/Z (gf180mcu_fd_sc_mcu7t5v0__dlyc_1)
+   0.7478    6.1636 v wire19/Z (gf180mcu_fd_sc_mcu7t5v0__buf_8)
+   0.5102    6.6738 v wire18/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.5212    7.1951 v wire17/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.0453    7.2404 v i_chip_core.con32_one_instruction_u/rxd (con32_one_instruction)
+             7.2404   data arrival time
+
+   0.0000    0.0000   clock clk_PAD (rise edge)
+   0.0000    0.0000   clock source latency
+   0.0000    0.0000 ^ clk_pad/Y (gf180mcu_fd_io__in_s)
+   0.3260    0.3260 ^ i_chip_core.con32_one_instruction_u/clk_ref (con32_one_instruction)
+   0.2500    0.5760   clock uncertainty
+   0.0000    0.5760   clock reconvergence pessimism
+   1.6255    2.2015   library hold time
+             2.2015   data required time
+-------------------------------------------------------------
+             2.2015   data required time
+            -7.2404   data arrival time
+-------------------------------------------------------------
+             5.0389   slack (MET)
+
+
+Startpoint: rst_n_PAD (input port clocked by clk_PAD)
+Endpoint: i_chip_core.con32_one_instruction_u
+          (rising edge-triggered flip-flop clocked by clk_PAD)
+Path Group: clk_PAD
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk_PAD (rise edge)
+   0.0000    0.0000   clock network delay (propagated)
+   2.0000    2.0000 ^ input external delay
+   0.0000    2.0000 ^ rst_n_PAD (inout)
+   1.8263    3.8263 ^ rst_n_pad/Y (gf180mcu_fd_io__in_c)
+   0.5248    4.3511 ^ wire16/Z (gf180mcu_fd_sc_mcu7t5v0__buf_8)
+   0.4924    4.8435 ^ wire15/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.5059    5.3494 ^ wire14/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.5305    5.8799 ^ wire13/Z (gf180mcu_fd_sc_mcu7t5v0__buf_12)
+   0.0595    5.9393 ^ i_chip_core.con32_one_instruction_u/rst (con32_one_instruction)
+             5.9393   data arrival time
+
+  25.0000   25.0000   clock clk_PAD (fall edge)
+   0.0000   25.0000   clock source latency
+   0.0000   25.0000 v clk_pad/Y (gf180mcu_fd_io__in_s)
+   0.3196   25.3196 v i_chip_core.con32_one_instruction_u/clk_ref (con32_one_instruction)
+  -0.2500   25.0696   clock uncertainty
+   0.0000   25.0696   clock reconvergence pessimism
+ -13.0021   12.0675   library setup time
+            12.0675   data required time
+-------------------------------------------------------------
+            12.0675   data required time
+            -5.9393   data arrival time
+-------------------------------------------------------------
+             6.1282   slack (MET)
+
+
+openroad> report_wns
+wns max 0.00
+openroad> report_tns
+tns max 0.00
+openroad> report_clock_min_period
+clk_PAD period_min = 0.00 fmax = inf
+openroad> exit

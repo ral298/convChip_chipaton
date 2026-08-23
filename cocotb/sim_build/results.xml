@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1787518384" />
+    <testcase name="test_uart_convolution" classname="chip_top_tb" file="/foss/designs/convChip_chipaton/cocotb/chip_top_tb.py" lineno="144" time="210.51143765449524" sim_time_ns="9383952.0" ratio_time="44576.92230196793" />
+  </testsuite>
+</testsuites>

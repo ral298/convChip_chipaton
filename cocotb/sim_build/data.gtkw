@@ -1,0 +1,462 @@
+[*]
+[*] GTKWave Analyzer v4.0.0-prealpha (8ba24ab) (w)1999-2022 BSI
+[*] Sun Aug 23 07:00:21 2026
+[*]
+[dumpfile] "/foss/designs/convChip_chipaton/cocotb/sim_build/chip_top.fst"
+[dumpfile_mtime] "Sun Aug 23 06:59:49 2026"
+[dumpfile_size] 199106
+[savefile] "/foss/designs/convChip_chipaton/cocotb/sim_build/data.gtkw"
+[timestart] 7487900000
+[size] 2493 1011
+[pos] -27 -24
+*-24.816200 7424202000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[markername] AA
+[markername] BB
+[markername] CC
+[markername] DD
+[markername] EE
+[markername] FF
+[markername] GG
+[markername] HH
+[markername] II
+[markername] JJ
+[markername] KK
+[markername] LL
+[markername] MM
+[markername] NN
+[markername] OO
+[markername] PP
+[markername] QQ
+[markername] RR
+[markername] SS
+[markername] TT
+[markername] UU
+[markername] VV
+[markername] WW
+[markername] XX
+[markername] YY
+[markername] ZZ
+[treeopen] chip_top.
+[treeopen] chip_top.bidir[1].
+[treeopen] chip_top.i_chip_core.
+[treeopen] chip_top.i_chip_core.con32_one_instruction_u.
+[sst_width] 458
+[signals_width] 287
+[sst_expanded] 1
+[sst_vpaned_height] 626
+@200
+-convolucion
+@420
+chip_top.i_chip_core.con32_one_instruction_u.uart0.BAUD_RATE
+chip_top.i_chip_core.con32_one_instruction_u.uart0.CLK_IN_HZ
+chip_top.i_chip_core.con32_one_instruction_u.uart0.RX_PERIOD
+chip_top.i_chip_core.con32_one_instruction_u.uart0.TX_PERIOD
+@28
+chip_top.i_chip_core.con32_one_instruction_u.uart0.clk
+chip_top.i_chip_core.con32_one_instruction_u.uart0.ena_tx
+chip_top.i_chip_core.con32_one_instruction_u.uart0.last_rxd
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rst
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_busy
+@22
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_byte[9:0]
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_data[7:0]
+@28
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_last_busy
+@22
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_period[15:0]
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_position[3:0]
+@28
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_rdy
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_sample_pulse
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rx_trigger
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rxd_reg
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_busy
+@22
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_byte[9:0]
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_data[7:0]
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_data_reg[7:0]
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_period[15:0]
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_position[3:0]
+@28
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_rdy
+chip_top.i_chip_core.con32_one_instruction_u.uart0.tx_run
+chip_top.i_chip_core.con32_one_instruction_u.uart0.rxd
+chip_top.i_chip_core.con32_one_instruction_u.uart0.txd
+@200
+-core
+@28
+chip_top.i_chip_core.con32_one_instruction_u.clk
+chip_top.i_chip_core.con32_one_instruction_u.clk_ref
+chip_top.i_chip_core.con32_one_instruction_u.rst
+chip_top.i_chip_core.con32_one_instruction_u.rxd
+chip_top.i_chip_core.con32_one_instruction_u.txd
+@200
+-chip_core
+@c00022
+chip_top.i_chip_core.bidir_in[39:0]
+@28
+(0)chip_top.i_chip_core.bidir_in[39:0]
+(1)chip_top.i_chip_core.bidir_in[39:0]
+(2)chip_top.i_chip_core.bidir_in[39:0]
+(3)chip_top.i_chip_core.bidir_in[39:0]
+(4)chip_top.i_chip_core.bidir_in[39:0]
+(5)chip_top.i_chip_core.bidir_in[39:0]
+(6)chip_top.i_chip_core.bidir_in[39:0]
+(7)chip_top.i_chip_core.bidir_in[39:0]
+(8)chip_top.i_chip_core.bidir_in[39:0]
+(9)chip_top.i_chip_core.bidir_in[39:0]
+(10)chip_top.i_chip_core.bidir_in[39:0]
+(11)chip_top.i_chip_core.bidir_in[39:0]
+(12)chip_top.i_chip_core.bidir_in[39:0]
+(13)chip_top.i_chip_core.bidir_in[39:0]
+(14)chip_top.i_chip_core.bidir_in[39:0]
+(15)chip_top.i_chip_core.bidir_in[39:0]
+(16)chip_top.i_chip_core.bidir_in[39:0]
+(17)chip_top.i_chip_core.bidir_in[39:0]
+(18)chip_top.i_chip_core.bidir_in[39:0]
+(19)chip_top.i_chip_core.bidir_in[39:0]
+(20)chip_top.i_chip_core.bidir_in[39:0]
+(21)chip_top.i_chip_core.bidir_in[39:0]
+(22)chip_top.i_chip_core.bidir_in[39:0]
+(23)chip_top.i_chip_core.bidir_in[39:0]
+(24)chip_top.i_chip_core.bidir_in[39:0]
+(25)chip_top.i_chip_core.bidir_in[39:0]
+(26)chip_top.i_chip_core.bidir_in[39:0]
+(27)chip_top.i_chip_core.bidir_in[39:0]
+(28)chip_top.i_chip_core.bidir_in[39:0]
+(29)chip_top.i_chip_core.bidir_in[39:0]
+(30)chip_top.i_chip_core.bidir_in[39:0]
+(31)chip_top.i_chip_core.bidir_in[39:0]
+(32)chip_top.i_chip_core.bidir_in[39:0]
+(33)chip_top.i_chip_core.bidir_in[39:0]
+(34)chip_top.i_chip_core.bidir_in[39:0]
+(35)chip_top.i_chip_core.bidir_in[39:0]
+(36)chip_top.i_chip_core.bidir_in[39:0]
+(37)chip_top.i_chip_core.bidir_in[39:0]
+(38)chip_top.i_chip_core.bidir_in[39:0]
+(39)chip_top.i_chip_core.bidir_in[39:0]
+@1401200
+-group_end
+@22
+chip_top.bidir_PAD2CORE[39:0]
+@28
+(39)chip_top.i_chip_core.bidir_in[39:0]
+@22
+chip_top.i_chip_core.bidir_out[39:0]
+@c00022
+chip_top.bidir_CORE2PAD[39:0]
+@28
+(0)chip_top.bidir_CORE2PAD[39:0]
+(1)chip_top.bidir_CORE2PAD[39:0]
+(2)chip_top.bidir_CORE2PAD[39:0]
+(3)chip_top.bidir_CORE2PAD[39:0]
+(4)chip_top.bidir_CORE2PAD[39:0]
+(5)chip_top.bidir_CORE2PAD[39:0]
+(6)chip_top.bidir_CORE2PAD[39:0]
+(7)chip_top.bidir_CORE2PAD[39:0]
+(8)chip_top.bidir_CORE2PAD[39:0]
+(9)chip_top.bidir_CORE2PAD[39:0]
+(10)chip_top.bidir_CORE2PAD[39:0]
+(11)chip_top.bidir_CORE2PAD[39:0]
+(12)chip_top.bidir_CORE2PAD[39:0]
+(13)chip_top.bidir_CORE2PAD[39:0]
+(14)chip_top.bidir_CORE2PAD[39:0]
+(15)chip_top.bidir_CORE2PAD[39:0]
+(16)chip_top.bidir_CORE2PAD[39:0]
+(17)chip_top.bidir_CORE2PAD[39:0]
+(18)chip_top.bidir_CORE2PAD[39:0]
+(19)chip_top.bidir_CORE2PAD[39:0]
+(20)chip_top.bidir_CORE2PAD[39:0]
+(21)chip_top.bidir_CORE2PAD[39:0]
+(22)chip_top.bidir_CORE2PAD[39:0]
+(23)chip_top.bidir_CORE2PAD[39:0]
+(24)chip_top.bidir_CORE2PAD[39:0]
+(25)chip_top.bidir_CORE2PAD[39:0]
+(26)chip_top.bidir_CORE2PAD[39:0]
+(27)chip_top.bidir_CORE2PAD[39:0]
+(28)chip_top.bidir_CORE2PAD[39:0]
+(29)chip_top.bidir_CORE2PAD[39:0]
+(30)chip_top.bidir_CORE2PAD[39:0]
+(31)chip_top.bidir_CORE2PAD[39:0]
+(32)chip_top.bidir_CORE2PAD[39:0]
+(33)chip_top.bidir_CORE2PAD[39:0]
+(34)chip_top.bidir_CORE2PAD[39:0]
+(35)chip_top.bidir_CORE2PAD[39:0]
+(36)chip_top.bidir_CORE2PAD[39:0]
+(37)chip_top.bidir_CORE2PAD[39:0]
+(38)chip_top.bidir_CORE2PAD[39:0]
+(39)chip_top.bidir_CORE2PAD[39:0]
+@1401200
+-group_end
+@28
+(37)chip_top.i_chip_core.bidir_out[39:0]
+(38)chip_top.i_chip_core.bidir_out[39:0]
+@c00022
+chip_top.bidir_CORE2PAD[39:0]
+@28
+(0)chip_top.bidir_CORE2PAD[39:0]
+(1)chip_top.bidir_CORE2PAD[39:0]
+(2)chip_top.bidir_CORE2PAD[39:0]
+(3)chip_top.bidir_CORE2PAD[39:0]
+(4)chip_top.bidir_CORE2PAD[39:0]
+(5)chip_top.bidir_CORE2PAD[39:0]
+(6)chip_top.bidir_CORE2PAD[39:0]
+(7)chip_top.bidir_CORE2PAD[39:0]
+(8)chip_top.bidir_CORE2PAD[39:0]
+(9)chip_top.bidir_CORE2PAD[39:0]
+(10)chip_top.bidir_CORE2PAD[39:0]
+(11)chip_top.bidir_CORE2PAD[39:0]
+(12)chip_top.bidir_CORE2PAD[39:0]
+(13)chip_top.bidir_CORE2PAD[39:0]
+(14)chip_top.bidir_CORE2PAD[39:0]
+(15)chip_top.bidir_CORE2PAD[39:0]
+(16)chip_top.bidir_CORE2PAD[39:0]
+(17)chip_top.bidir_CORE2PAD[39:0]
+(18)chip_top.bidir_CORE2PAD[39:0]
+(19)chip_top.bidir_CORE2PAD[39:0]
+(20)chip_top.bidir_CORE2PAD[39:0]
+(21)chip_top.bidir_CORE2PAD[39:0]
+(22)chip_top.bidir_CORE2PAD[39:0]
+(23)chip_top.bidir_CORE2PAD[39:0]
+(24)chip_top.bidir_CORE2PAD[39:0]
+(25)chip_top.bidir_CORE2PAD[39:0]
+(26)chip_top.bidir_CORE2PAD[39:0]
+(27)chip_top.bidir_CORE2PAD[39:0]
+(28)chip_top.bidir_CORE2PAD[39:0]
+(29)chip_top.bidir_CORE2PAD[39:0]
+(30)chip_top.bidir_CORE2PAD[39:0]
+(31)chip_top.bidir_CORE2PAD[39:0]
+(32)chip_top.bidir_CORE2PAD[39:0]
+(33)chip_top.bidir_CORE2PAD[39:0]
+(34)chip_top.bidir_CORE2PAD[39:0]
+(35)chip_top.bidir_CORE2PAD[39:0]
+(36)chip_top.bidir_CORE2PAD[39:0]
+(37)chip_top.bidir_CORE2PAD[39:0]
+(38)chip_top.bidir_CORE2PAD[39:0]
+(39)chip_top.bidir_CORE2PAD[39:0]
+@1401200
+-group_end
+@c00022
+chip_top.bidir_PAD[39:0]
+@28
+(0)chip_top.bidir_PAD[39:0]
+(1)chip_top.bidir_PAD[39:0]
+(2)chip_top.bidir_PAD[39:0]
+(3)chip_top.bidir_PAD[39:0]
+(4)chip_top.bidir_PAD[39:0]
+(5)chip_top.bidir_PAD[39:0]
+(6)chip_top.bidir_PAD[39:0]
+(7)chip_top.bidir_PAD[39:0]
+(8)chip_top.bidir_PAD[39:0]
+(9)chip_top.bidir_PAD[39:0]
+(10)chip_top.bidir_PAD[39:0]
+(11)chip_top.bidir_PAD[39:0]
+(12)chip_top.bidir_PAD[39:0]
+(13)chip_top.bidir_PAD[39:0]
+(14)chip_top.bidir_PAD[39:0]
+(15)chip_top.bidir_PAD[39:0]
+(16)chip_top.bidir_PAD[39:0]
+(17)chip_top.bidir_PAD[39:0]
+(18)chip_top.bidir_PAD[39:0]
+(19)chip_top.bidir_PAD[39:0]
+(20)chip_top.bidir_PAD[39:0]
+(21)chip_top.bidir_PAD[39:0]
+(22)chip_top.bidir_PAD[39:0]
+(23)chip_top.bidir_PAD[39:0]
+(24)chip_top.bidir_PAD[39:0]
+(25)chip_top.bidir_PAD[39:0]
+(26)chip_top.bidir_PAD[39:0]
+(27)chip_top.bidir_PAD[39:0]
+(28)chip_top.bidir_PAD[39:0]
+(29)chip_top.bidir_PAD[39:0]
+(30)chip_top.bidir_PAD[39:0]
+(31)chip_top.bidir_PAD[39:0]
+(32)chip_top.bidir_PAD[39:0]
+(33)chip_top.bidir_PAD[39:0]
+(34)chip_top.bidir_PAD[39:0]
+(35)chip_top.bidir_PAD[39:0]
+(36)chip_top.bidir_PAD[39:0]
+(37)chip_top.bidir_PAD[39:0]
+(38)chip_top.bidir_PAD[39:0]
+(39)chip_top.bidir_PAD[39:0]
+@1401200
+-group_end
+@28
+(35)chip_top.bidir_PAD[39:0]
+(36)chip_top.bidir_PAD[39:0]
+(37)chip_top.bidir_PAD[39:0]
+(38)chip_top.bidir_PAD[39:0]
+(39)chip_top.bidir_PAD[39:0]
+@200
+-configuration
+@c00022
+chip_top.i_chip_core.bidir_oe[39:0]
+@28
+(0)chip_top.i_chip_core.bidir_oe[39:0]
+(1)chip_top.i_chip_core.bidir_oe[39:0]
+(2)chip_top.i_chip_core.bidir_oe[39:0]
+(3)chip_top.i_chip_core.bidir_oe[39:0]
+(4)chip_top.i_chip_core.bidir_oe[39:0]
+(5)chip_top.i_chip_core.bidir_oe[39:0]
+(6)chip_top.i_chip_core.bidir_oe[39:0]
+(7)chip_top.i_chip_core.bidir_oe[39:0]
+(8)chip_top.i_chip_core.bidir_oe[39:0]
+(9)chip_top.i_chip_core.bidir_oe[39:0]
+(10)chip_top.i_chip_core.bidir_oe[39:0]
+(11)chip_top.i_chip_core.bidir_oe[39:0]
+(12)chip_top.i_chip_core.bidir_oe[39:0]
+(13)chip_top.i_chip_core.bidir_oe[39:0]
+(14)chip_top.i_chip_core.bidir_oe[39:0]
+(15)chip_top.i_chip_core.bidir_oe[39:0]
+(16)chip_top.i_chip_core.bidir_oe[39:0]
+(17)chip_top.i_chip_core.bidir_oe[39:0]
+(18)chip_top.i_chip_core.bidir_oe[39:0]
+(19)chip_top.i_chip_core.bidir_oe[39:0]
+(20)chip_top.i_chip_core.bidir_oe[39:0]
+(21)chip_top.i_chip_core.bidir_oe[39:0]
+(22)chip_top.i_chip_core.bidir_oe[39:0]
+(23)chip_top.i_chip_core.bidir_oe[39:0]
+(24)chip_top.i_chip_core.bidir_oe[39:0]
+(25)chip_top.i_chip_core.bidir_oe[39:0]
+(26)chip_top.i_chip_core.bidir_oe[39:0]
+(27)chip_top.i_chip_core.bidir_oe[39:0]
+(28)chip_top.i_chip_core.bidir_oe[39:0]
+(29)chip_top.i_chip_core.bidir_oe[39:0]
+(30)chip_top.i_chip_core.bidir_oe[39:0]
+(31)chip_top.i_chip_core.bidir_oe[39:0]
+(32)chip_top.i_chip_core.bidir_oe[39:0]
+(33)chip_top.i_chip_core.bidir_oe[39:0]
+(34)chip_top.i_chip_core.bidir_oe[39:0]
+(35)chip_top.i_chip_core.bidir_oe[39:0]
+(36)chip_top.i_chip_core.bidir_oe[39:0]
+(37)chip_top.i_chip_core.bidir_oe[39:0]
+(38)chip_top.i_chip_core.bidir_oe[39:0]
+(39)chip_top.i_chip_core.bidir_oe[39:0]
+@1401200
+-group_end
+@22
+chip_top.i_chip_core.bidir_cs[39:0]
+@c00022
+chip_top.i_chip_core.bidir_sl[39:0]
+@28
+(0)chip_top.i_chip_core.bidir_sl[39:0]
+(1)chip_top.i_chip_core.bidir_sl[39:0]
+(2)chip_top.i_chip_core.bidir_sl[39:0]
+(3)chip_top.i_chip_core.bidir_sl[39:0]
+(4)chip_top.i_chip_core.bidir_sl[39:0]
+(5)chip_top.i_chip_core.bidir_sl[39:0]
+(6)chip_top.i_chip_core.bidir_sl[39:0]
+(7)chip_top.i_chip_core.bidir_sl[39:0]
+(8)chip_top.i_chip_core.bidir_sl[39:0]
+(9)chip_top.i_chip_core.bidir_sl[39:0]
+(10)chip_top.i_chip_core.bidir_sl[39:0]
+(11)chip_top.i_chip_core.bidir_sl[39:0]
+(12)chip_top.i_chip_core.bidir_sl[39:0]
+(13)chip_top.i_chip_core.bidir_sl[39:0]
+(14)chip_top.i_chip_core.bidir_sl[39:0]
+(15)chip_top.i_chip_core.bidir_sl[39:0]
+(16)chip_top.i_chip_core.bidir_sl[39:0]
+(17)chip_top.i_chip_core.bidir_sl[39:0]
+(18)chip_top.i_chip_core.bidir_sl[39:0]
+(19)chip_top.i_chip_core.bidir_sl[39:0]
+(20)chip_top.i_chip_core.bidir_sl[39:0]
+(21)chip_top.i_chip_core.bidir_sl[39:0]
+(22)chip_top.i_chip_core.bidir_sl[39:0]
+(23)chip_top.i_chip_core.bidir_sl[39:0]
+(24)chip_top.i_chip_core.bidir_sl[39:0]
+(25)chip_top.i_chip_core.bidir_sl[39:0]
+(26)chip_top.i_chip_core.bidir_sl[39:0]
+(27)chip_top.i_chip_core.bidir_sl[39:0]
+(28)chip_top.i_chip_core.bidir_sl[39:0]
+(29)chip_top.i_chip_core.bidir_sl[39:0]
+(30)chip_top.i_chip_core.bidir_sl[39:0]
+(31)chip_top.i_chip_core.bidir_sl[39:0]
+(32)chip_top.i_chip_core.bidir_sl[39:0]
+(33)chip_top.i_chip_core.bidir_sl[39:0]
+(34)chip_top.i_chip_core.bidir_sl[39:0]
+(35)chip_top.i_chip_core.bidir_sl[39:0]
+(36)chip_top.i_chip_core.bidir_sl[39:0]
+(37)chip_top.i_chip_core.bidir_sl[39:0]
+(38)chip_top.i_chip_core.bidir_sl[39:0]
+(39)chip_top.i_chip_core.bidir_sl[39:0]
+@1401200
+-group_end
+@22
+chip_top.i_chip_core.bidir_ie[39:0]
+chip_top.i_chip_core.bidir_pu[39:0]
+@c00022
+chip_top.i_chip_core.bidir_pd[39:0]
+@28
+(0)chip_top.i_chip_core.bidir_pd[39:0]
+(1)chip_top.i_chip_core.bidir_pd[39:0]
+(2)chip_top.i_chip_core.bidir_pd[39:0]
+(3)chip_top.i_chip_core.bidir_pd[39:0]
+(4)chip_top.i_chip_core.bidir_pd[39:0]
+(5)chip_top.i_chip_core.bidir_pd[39:0]
+(6)chip_top.i_chip_core.bidir_pd[39:0]
+(7)chip_top.i_chip_core.bidir_pd[39:0]
+(8)chip_top.i_chip_core.bidir_pd[39:0]
+(9)chip_top.i_chip_core.bidir_pd[39:0]
+(10)chip_top.i_chip_core.bidir_pd[39:0]
+(11)chip_top.i_chip_core.bidir_pd[39:0]
+(12)chip_top.i_chip_core.bidir_pd[39:0]
+(13)chip_top.i_chip_core.bidir_pd[39:0]
+(14)chip_top.i_chip_core.bidir_pd[39:0]
+(15)chip_top.i_chip_core.bidir_pd[39:0]
+(16)chip_top.i_chip_core.bidir_pd[39:0]
+(17)chip_top.i_chip_core.bidir_pd[39:0]
+(18)chip_top.i_chip_core.bidir_pd[39:0]
+(19)chip_top.i_chip_core.bidir_pd[39:0]
+(20)chip_top.i_chip_core.bidir_pd[39:0]
+(21)chip_top.i_chip_core.bidir_pd[39:0]
+(22)chip_top.i_chip_core.bidir_pd[39:0]
+(23)chip_top.i_chip_core.bidir_pd[39:0]
+(24)chip_top.i_chip_core.bidir_pd[39:0]
+(25)chip_top.i_chip_core.bidir_pd[39:0]
+(26)chip_top.i_chip_core.bidir_pd[39:0]
+(27)chip_top.i_chip_core.bidir_pd[39:0]
+(28)chip_top.i_chip_core.bidir_pd[39:0]
+(29)chip_top.i_chip_core.bidir_pd[39:0]
+(30)chip_top.i_chip_core.bidir_pd[39:0]
+(31)chip_top.i_chip_core.bidir_pd[39:0]
+(32)chip_top.i_chip_core.bidir_pd[39:0]
+(33)chip_top.i_chip_core.bidir_pd[39:0]
+(34)chip_top.i_chip_core.bidir_pd[39:0]
+(35)chip_top.i_chip_core.bidir_pd[39:0]
+(36)chip_top.i_chip_core.bidir_pd[39:0]
+(37)chip_top.i_chip_core.bidir_pd[39:0]
+(38)chip_top.i_chip_core.bidir_pd[39:0]
+(39)chip_top.i_chip_core.bidir_pd[39:0]
+@1401200
+-group_end
+@200
+-configuration core
+@22
+chip_top.bidir_CORE2PAD_OE[39:0]
+chip_top.bidir_CORE2PAD_CS[39:0]
+chip_top.bidir_CORE2PAD_SL[39:0]
+chip_top.bidir_CORE2PAD_IE[39:0]
+chip_top.bidir_CORE2PAD_PU[39:0]
+chip_top.bidir_CORE2PAD_PD[39:0]
+@200
+-pads
+@28
+chip_top.bidir[1].pad.A
+chip_top.bidir[1].pad.CS
+chip_top.bidir[1].pad.DVDD
+chip_top.bidir[1].pad.DVSS
+chip_top.bidir[1].pad.IE
+@29
+chip_top.bidir[1].pad.OE
+@28
+chip_top.bidir[1].pad.PAD
+chip_top.bidir[1].pad.PD
+chip_top.bidir[1].pad.PU
+chip_top.bidir[1].pad.SL
+chip_top.bidir[1].pad.VDD
+chip_top.bidir[1].pad.VSS
+chip_top.bidir[1].pad.Y
+chip_top.bidir[1].pad.gnd
+chip_top.bidir[1].pad.pwr
+[pattern_trace] 1
+[pattern_trace] 0

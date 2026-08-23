@@ -1,0 +1,396 @@
+# Standalone hardening config for the counter macro.
+
+# Runs the LibreLane Classic flow against rtl/counter.sv, producing the
+
+# GDS / LEF / Liberty / Verilog netlist views that chip_top_multi
+
+# later pulls in under `MACROS:`.
+
+
+
+meta:
+
+  version: 3
+
+  flow: Classic
+
+
+
+DESIGN_NAME: con32_one_instruction
+
+
+
+VERILOG_FILES:
+
+- dir::../src/con32_one_instruction.v
+
+- dir::../src/acti.v
+
+- dir::../src/con32bits_parall.v
+
+- dir::../src/four_palabras_uart.v
+
+- dir::../src/mult_16b_bf.v
+
+- dir::../src/punt_mo_seg.v
+
+- dir::../src/salida.v
+
+- dir::../src/suma_16b.v
+
+- dir::../src/uart_tx_4in4.v
+
+- dir::../src/uart_ultimo.v
+
+
+
+# Frecuency 20 MHz.
+
+CLOCK_PORT: clk_ref
+
+CLOCK_NET: clk_ref
+
+CLOCK_PERIOD: 50   # ns
+
+#PNR_SDC_FILE: "dir::../src/constraint.sdc"
+IO_PIN_ORDER_CFG: "dir::../src/pin.cfg"
+#PL_RESIZER_MAX_SLEW_MARGIN: 20      # Le da 20% de margen al Slew para no rozar el límite en SS
+#PL_RESIZER_MAX_CAP_MARGIN: 20
+
+
+
+
+
+PNR_CORNERS:
+  - "nom_ss_125C_4v50"
+  - "nom_ff_n40C_5v50"
+  - "nom_tt_025C_5v00"
+  - "min_tt_025C_5v00"
+  - "min_ff_n40C_5v50"
+  - "min_ss_125C_4v50"
+  - "max_tt_025C_5v00"
+  - "max_ss_125C_4v50"
+  - "max_ff_n40C_5v50"
+
+
+
+DEDUPLICATE_CORNERS: true
+
+
+
+
+RUN_POST_CTS_RESIZER_TIMING: true
+
+RUN_POST_GRT_DESIGN_REPAIR: true       # Repara Slew y Max Cap post-GRT
+
+RUN_POST_GRT_RESIZER_TIMING: true      # Optimiza Setup post-GRT (opcional pero útil)
+RUN_POST_GPL_DESIGN_REPAIR: true
+RUN_POST_GRT_RESIZER_TIMING: true
+
+GRT_ADJUSTMENT: 0.15                   # Aumenta la capacidad efectiva de las capas de metal
+
+
+
+# Límites de seguridad para evitar explosión de buffers:
+
+#PL_RESIZER_FIX_HOLD_FIRST: true
+#GRT_RESIZER_FIX_HOLD_FIRST: true
+PL_RESIZER_HOLD_MAX_BUFFER_PCT: 35
+
+PL_RESIZER_SETUP_MAX_BUFFER_PCT: 35
+
+GRT_RESIZER_HOLD_MAX_BUFFER_PCT: 35
+GRT_RESIZER_SETUP_MAX_BUFFER_PCT: 35
+#15 # para ambos caso c7ando era area 3
+
+PL_RESIZER_SETUP_GATE_CLONING: true
+GRT_RESIZER_SETUP_GATE_CLONING: true
+
+DESIGN_REPAIR_BUFFER_INPUT_PORTS: true
+DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: true
+SYNTH_BUFFERING: true
+SYNTH_SIZING: true
+#  SYNTH_ABC_DFF: true                   # Optimiza registros redundantes
+SYNTH_DIRECT_WIRE_BUFFERING: true
+#SYNTH_ABC_USE_MFS3: true
+#SYNTH_ABC_BUFFERING: true
+
+
+#DESIGN_REPAIR_TIE_FANOUT: true
+
+# Márgenes de Slack razonables para GF180MCU:
+
+PL_RESIZER_SETUP_SLACK_MARGIN: 4.0
+#0.15
+PL_RESIZER_HOLD_SLACK_MARGIN: 0.1
+GRT_RESIZER_HOLD_SLACK_MARGIN: 0.025
+GRT_RESIZER_SETUP_SLACK_MARGIN: 2.0
+#0.1
+
+MAX_TRANSITION_CONSTRAINT: 2.5
+
+
+PL_RESIZER_SETUP_REPAIR_TNS_PCT: 100
+GRT_RESIZER_SETUP_REPAIR_TNS_PCT: 100
+PL_RESIZER_HOLD_REPAIR_TNS_PCT: 100
+GRT_RESIZER_HOLD_REPAIR_TNS_PCT: 100
+
+DESIGN_REPAIR_MAX_WIRE_LENGTH: 500
+
+
+########################################################
+# Reparación agresiva de Slew y Cap en Placement y Routing
+DESIGN_REPAIR_MAX_SLEW_PCT: 20
+GRT_DESIGN_REPAIR_MAX_SLEW_PCT: 20
+DESIGN_REPAIR_MAX_CAP_PCT: 20
+GRT_DESIGN_REPAIR_MAX_CAP_PCT: 20
+
+###########################################################
+
+MAX_CAPACITANCE_CONSTRAINT: 0.2
+
+
+
+# Prioridad de reparación:
+
+PL_RESIZER_ALLOW_SETUP_VIOS: false
+
+DEDUPLICATE_CORNERS: false
+
+
+
+
+
+
+# Small block -- let LibreLane size the die from utilisation.
+
+#FP_SIZING: "absolute"
+
+DIE_AREA: [0, 0, 1400, 1400]
+
+FP_SIZING: absolute
+
+#FP_CORE_UTIL: 70
+
+#PL_TARGET_DENSITY_PCT: 60
+
+#PL_TARGET_DENSITY_PCT: 25
+
+#PL_MAX_DISPLACEMENT_Y: 300 
+
+
+
+MAX_FANOUT_CONSTRAINT: 24
+#con 24 el 0roceso de violaciones siguio porvmas dd 5 horas, en debes de bajar subisn jajs
+#32
+
+#8192
+
+
+
+CTS_CLK_BUFFERS:
+- gf180mcu_fd_sc_mcu7t5v0__clkinv_2
+- gf180mcu_fd_sc_mcu7t5v0__clkinv_4
+- gf180mcu_fd_sc_mcu7t5v0__clkinv_8
+
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+
+
+CTS_ROOT_BUFFER: gf180mcu_fd_sc_mcu7t5v0__clkinv_16
+
+#EXTRA_EXCLUDED_CELLS:
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_12
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_16
+#- gf180mcu_fd_sc_mcu7t5v0__clkbuf_20
+
+
+
+ROUTING_CORES: 12              # Hilos para el Ruteador Detallado (TritonRoute)
+
+KLAYOUT_DRC_THREADS: 12
+
+KLAYOUT_DENSITY_THREADS: 12
+
+KLAYOUT_XOR_THREADS: 12
+
+DRT_THREADS: 12
+
+STA_THREADS: 12
+
+#DRT_OPT_ITERS: 96
+
+#GRT_ANT_ITERS: 5
+
+#DIODE_INSERTION_STRATEGY: 3
+
+#GRT_MAX_DIODE_INS_ITERS: 3
+
+#GLB_OPTIMIZE_MIRRORING: 0
+
+
+
+
+
+RUN_ANTENNA_REPAIR: true
+
+RUN_HEURISTIC_DIODE_INSERTION: false
+#DIODE_PADDING: 1
+
+
+
+
+
+
+
+# Power / ground nets.
+
+VDD_NETS:
+
+  - VDD
+
+GND_NETS:
+
+  - VSS
+
+
+
+GPL_CELL_PADDING: 1
+
+DPL_CELL_PADDING: 1
+
+
+
+# Signoff / streamout.
+
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+
+
+
+# Routing / ESD.
+
+RT_MIN_LAYER: Metal2
+
+RT_MAX_LAYER: Metal5 #originalmente estaba en 4 y en false el pdn multilayer
+
+
+SIGNAL_WIRE_RC_LAYERS: [Metal2, Metal3, Metal4]
+
+# El reloj viaja en las capas más altas y limpias
+CLOCK_WIRE_RC_LAYERS: [Metal3, Metal4]
+RT_CLOCK_MIN_LAYER: Metal3
+RT_CLOCK_MAX_LAYER: Metal4
+# Bloquea al 100% el uso de Metal1 para ruteo intercelda
+GRT_LAYER_ADJUSTMENTS: [1.0, 0.1, 0.0, 0.0, 0.0]
+
+
+
+# Power distribution network (straps + pitch).
+
+PDN_MULTILAYER: true
+FP_PDN_ENABLE_RAILS: true
+FP_PDN_CHECK_NODES: true
+#FP_PDN_VERTICAL_LAYER: Metal4
+#FP_PDN_HORIZONTAL_LAYER: Metal5
+
+FP_PDN_CORE_RING: true
+FP_PDN_CORE_RING_VWIDTH: 20       # Ancho de 20um para soportar alta corriente en los bordes
+FP_PDN_CORE_RING_HWIDTH: 20
+FP_PDN_CORE_RING_VSPACING: 4.8      # Separación entre VDD y VSS
+FP_PDN_CORE_RING_HSPACING: 4.8
+PDN_VWIDTH: 5
+
+PDN_HWIDTH: 5
+
+PDN_VSPACING: 2
+
+PDN_HSPACING: 2
+
+PDN_VPITCH: 120
+
+PDN_HPITCH: 120
+
+
+
+
+
+#PDN_CORE_RING_CONNECT_TO_PAD_LAYERS: [Metal2]
+
+
+
+
+
+# CTS defaults.
+
+CTS_SINK_CLUSTERING_ENABLE: true
+
+# Inyectar el script justo después de que TritonCTS termine de colocar los búferes/inversores
+# Configuración de Hooks de paso en LibreLane
+# Opción Alternativa B (Sintaxis previa de OpenLane 2):
+#PNR_SDC_FILE: "dir::mesh.tcl"
+#CTS_OBSTRUCTION_AWARE: true
+
+#CTS_DISTANCE_BETWEEN_BUFFERS: 180
+#180
+#120
+
+#CTS_BALANCE_LEVELS: true
+
+CTS_APPLY_NDR: full
+#root_only
+#none
+#half
+#full
+
+
+
+
+#CTS_CLK_MAX_WIRE_LENGTH: 0
+
+
+
+CTS_SINK_CLUSTERING_SIZE: 32
+#90
+
+#256
+
+#CTS_SINK_CLUSTERING_MAX_DIAMETER: 20
+#100
+
+PL_RESIZER_GATE_CLONING: true
+CTS_OBSTRUCTION_AWARE: true             # Ayuda a esquivar las tiras de la PDN
+CTS_BALANCE_LEVELS: true
+#CTS_DISABLE_POST_PROCESSING: false      # Deja activo el post-procesamiento para sinks aislados
+PL_OPTIMIZE_MIRRORING: true             # Voltea celdas para optimizar distancias de pines
+CTS_SINK_BUFFER_MAX_CAP_DERATE_PCT: 100 # Sin derate artificial; usa el 100% de la capacidad de la celda
+CTS_DELAY_BUFFER_DERATE_PCT: 100
+#CTS_DISTANCE_BETWEEN_BUFFERS: 70
+#CTS_CLK_MAX_WIRE_LENGTH: 300
+#CTS_SINK_CLUSTERING_MAX_DIAMETER: 70
+STA_MAX_VIOLATOR_COUNT: 200
+# Margins.
+
+TOP_MARGIN_MULT: 2
+
+BOTTOM_MARGIN_MULT: 2
+
+LEFT_MARGIN_MULT: 2
+
+RIGHT_MARGIN_MULT: 2
+
+# Area-first synthesis (the counter is tiny, we do not need effort).
+
+SYNTH_STRATEGY: "DELAY 4"
+#"AREA 1" #estaba originalmente en area 2
+
+
+
+# Route-routeability knob for very small designs.
+
+GRT_ALLOW_CONGESTION: false
