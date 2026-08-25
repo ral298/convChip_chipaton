@@ -57,7 +57,7 @@ IGNORE_DISCONNECTED_MODULES:
 # Clock
 CLOCK_PORT: clk_PAD
 CLOCK_NET: clk_pad/Y
-CLOCK_PERIOD: 50 # 50 MHz
+CLOCK_PERIOD: 40 # 50 MHz
 
 
 ROUTING_CORES: 12              # Hilos para el Ruteador Detallado (TritonRoute)

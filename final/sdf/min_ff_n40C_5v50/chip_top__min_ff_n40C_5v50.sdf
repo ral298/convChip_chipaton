@@ -1,7 +1,7 @@
 (DELAYFILE
  (SDFVERSION "3.0")
  (DESIGN "chip_top")
- (DATE "Sun Aug 23 20:05:26 2026")
+ (DATE "Tue Aug 25 03:14:21 2026")
  (VENDOR "Parallax")
  (PROGRAM "STA")
  (VERSION "2.7.0")
@@ -71,7 +71,7 @@
     (INTERCONNECT analog\[0\]\.pad.ASIG5V analog_PAD[0] (0.000:0.000:0.000))
     (INTERCONNECT analog\[1\]\.pad.ASIG5V analog_PAD[1] (0.000:0.000:0.000))
     (INTERCONNECT bidir\[0\]\.pad.PAD bidir_PAD[0] (0.000:0.000:0.000))
-    (INTERCONNECT bidir\[0\]\.pad.Y hold324.I (0.002:0.002:0.002) (0.002:0.002:0.002))
+    (INTERCONNECT bidir\[0\]\.pad.Y wire19.I (0.009:0.009:0.009) (0.009:0.009:0.009))
     (INTERCONNECT bidir\[0\]\.pad_208.ZN bidir\[0\]\.pad.A (0.000:0.000:0.000))
     (INTERCONNECT bidir\[0\]\.pad_209.ZN bidir\[0\]\.pad.CS (0.000:0.000:0.000))
     (INTERCONNECT bidir\[0\]\.pad_210.ZN bidir\[0\]\.pad.OE (0.000:0.000:0.000))
@@ -387,10 +387,9 @@
     (INTERCONNECT bidir\[9\]\.pad_320.Z bidir\[9\]\.pad.A (0.000:0.000:0.000))
     (INTERCONNECT bidir\[9\]\.pad_321.Z bidir\[9\]\.pad.OE (0.000:0.000:0.000))
     (INTERCONNECT bidir\[9\]\.pad_322.Z bidir\[9\]\.pad.SL (0.000:0.000:0.000))
-    (INTERCONNECT clk_pad.Y i_chip_core\.con32_one_instruction_u.clk_ref (0.192:0.192:0.192) (0.195:0.195:0.195))
+    (INTERCONNECT clk_pad.Y i_chip_core\.con32_one_instruction_u.clk_ref (0.191:0.191:0.191) (0.194:0.194:0.194))
     (INTERCONNECT clk_pad_180.ZN clk_pad.PD (0.000:0.000:0.000))
     (INTERCONNECT clk_pad_181.ZN clk_pad.PU (0.000:0.000:0.000))
-    (INTERCONNECT hold324.Z wire19.I (0.003:0.003:0.003) (0.003:0.003:0.003))
     (INTERCONNECT i_chip_core\.con32_one_instruction_u.rx_sample_pulse wire12.I (0.005:0.005:0.005) (0.005:0.005:0.005))
     (INTERCONNECT i_chip_core\.con32_one_instruction_u.rxd_out wire10.I (0.011:0.011:0.011) (0.011:0.011:0.011))
     (INTERCONNECT i_chip_core\.con32_one_instruction_u.tx_busy wire6.I (0.013:0.013:0.013) (0.013:0.013:0.013))
@@ -427,12 +426,12 @@
     (INTERCONNECT wire11.Z bidir\[4\]\.pad.A (0.015:0.015:0.015) (0.015:0.015:0.015))
     (INTERCONNECT wire12.Z wire11.I (0.016:0.016:0.016) (0.016:0.016:0.016))
     (INTERCONNECT wire13.Z i_chip_core\.con32_one_instruction_u.rst (0.036:0.036:0.036) (0.035:0.035:0.035))
-    (INTERCONNECT wire14.Z wire13.I (0.028:0.028:0.028) (0.027:0.027:0.027))
-    (INTERCONNECT wire15.Z wire14.I (0.018:0.018:0.018) (0.018:0.018:0.018))
+    (INTERCONNECT wire14.Z wire13.I (0.027:0.027:0.027) (0.026:0.026:0.026))
+    (INTERCONNECT wire15.Z wire14.I (0.016:0.016:0.016) (0.016:0.016:0.016))
     (INTERCONNECT wire16.Z wire15.I (0.016:0.016:0.016) (0.016:0.016:0.016))
-    (INTERCONNECT wire17.Z i_chip_core\.con32_one_instruction_u.rxd (0.027:0.027:0.027) (0.027:0.027:0.027))
-    (INTERCONNECT wire18.Z wire17.I (0.027:0.027:0.027) (0.026:0.026:0.026))
-    (INTERCONNECT wire19.Z wire18.I (0.017:0.017:0.017) (0.016:0.016:0.016))
+    (INTERCONNECT wire17.Z i_chip_core\.con32_one_instruction_u.rxd (0.027:0.027:0.027) (0.026:0.026:0.026))
+    (INTERCONNECT wire18.Z wire17.I (0.028:0.028:0.028) (0.027:0.027:0.027))
+    (INTERCONNECT wire19.Z wire18.I (0.016:0.016:0.016) (0.016:0.016:0.016))
     (INTERCONNECT wire2.Z wire1.I (0.016:0.016:0.016) (0.016:0.016:0.016))
     (INTERCONNECT wire3.Z wire2.I (0.017:0.017:0.017) (0.016:0.016:0.016))
     (INTERCONNECT wire4.Z wire3.I (0.026:0.026:0.026) (0.025:0.025:0.025))
@@ -468,7 +467,7 @@
     (COND CS==1'b1&&IE==1'b1&&OE==1'b0
      (IOPATH PAD Y (0.000:0.000:0.000)))
     (COND CS==1'b0&&IE==1'b1&&OE==1'b0
-     (IOPATH PAD Y (0.677:0.677:0.677) (0.524:0.524:0.524)))
+     (IOPATH PAD Y (0.701:0.701:0.701) (0.548:0.548:0.548)))
    )
   )
  )
@@ -1574,36 +1573,25 @@
   )
  )
  (CELL
-  (CELLTYPE "gf180mcu_fd_sc_mcu7t5v0__dlyc_1")
-  (INSTANCE hold324)
-  (DELAY
-   (ABSOLUTE
-    (IOPATH I Z (1.192:1.192:1.192) (1.204:1.204:1.204))
-   )
-  )
- )
- (CELL
   (CELLTYPE "con32_one_instruction")
   (INSTANCE i_chip_core\.con32_one_instruction_u)
   (DELAY
    (ABSOLUTE
-    (IOPATH clk_ref txd (3.103:3.103:3.103) (3.079:3.079:3.079))
-    (IOPATH clk_ref tx_busy (3.753:3.753:3.753) (3.572:3.572:3.572))
-    (IOPATH clk_ref rxd_out (2.482:2.482:2.482) (2.463:2.463:2.463))
-    (IOPATH clk_ref rx_sample_pulse (3.561:3.561:3.561) (3.406:3.406:3.406))
+    (IOPATH clk_ref txd (3.078:3.078:3.078) (3.053:3.053:3.053))
+    (IOPATH clk_ref tx_busy (3.808:3.808:3.808) (3.625:3.625:3.625))
+    (IOPATH clk_ref rxd_out (2.445:2.445:2.445) (2.426:2.426:2.426))
+    (IOPATH clk_ref rx_sample_pulse (3.369:3.369:3.369) (3.199:3.199:3.199))
    )
   )
   (TIMINGCHECK
-    (SETUP (posedge rxd) (posedge clk_ref) (-0.240:-0.240:-0.240))
-    (SETUP (negedge rxd) (posedge clk_ref) (-0.320:-0.320:-0.320))
-    (HOLD (posedge rxd) (posedge clk_ref) (0.464:0.464:0.464))
-    (HOLD (negedge rxd) (posedge clk_ref) (0.628:0.628:0.628))
-    (SETUP (posedge rst) (posedge clk_ref) (7.216:7.216:7.216))
-    (SETUP (negedge rst) (posedge clk_ref) (7.094:7.094:7.094))
-    (HOLD (posedge rst) (posedge clk_ref) (-0.480:-0.480:-0.480))
-    (HOLD (negedge rst) (posedge clk_ref) (-4.734:-4.734:-4.734))
-    (SETUP (posedge rst) (negedge clk_ref) (4.203:4.203:4.203))
-    (HOLD (posedge rst) (negedge clk_ref) (-2.589:-2.589:-2.589))
+    (SETUP (posedge rxd) (posedge clk_ref) (-0.141:-0.141:-0.141))
+    (SETUP (negedge rxd) (posedge clk_ref) (-0.229:-0.229:-0.229))
+    (HOLD (posedge rxd) (posedge clk_ref) (0.377:0.377:0.377))
+    (HOLD (negedge rxd) (posedge clk_ref) (0.540:0.540:0.540))
+    (SETUP (posedge rst) (posedge clk_ref) (7.238:7.238:7.238))
+    (SETUP (negedge rst) (posedge clk_ref) (7.383:7.383:7.383))
+    (HOLD (posedge rst) (posedge clk_ref) (0.142:0.142:0.142))
+    (HOLD (negedge rst) (posedge clk_ref) (-4.655:-4.655:-4.655))
   )
  )
  (CELL
@@ -1764,7 +1752,7 @@
   (INSTANCE wire13)
   (DELAY
    (ABSOLUTE
-    (IOPATH I Z (0.163:0.163:0.163) (0.166:0.166:0.166))
+    (IOPATH I Z (0.162:0.162:0.162) (0.165:0.165:0.165))
    )
   )
  )
@@ -1773,7 +1761,7 @@
   (INSTANCE wire14)
   (DELAY
    (ABSOLUTE
-    (IOPATH I Z (0.160:0.160:0.160) (0.161:0.161:0.161))
+    (IOPATH I Z (0.154:0.154:0.154) (0.157:0.157:0.157))
    )
   )
  )
@@ -1782,7 +1770,7 @@
   (INSTANCE wire15)
   (DELAY
    (ABSOLUTE
-    (IOPATH I Z (0.158:0.158:0.158) (0.164:0.164:0.164))
+    (IOPATH I Z (0.155:0.155:0.155) (0.162:0.162:0.162))
    )
   )
  )
@@ -1800,7 +1788,7 @@
   (INSTANCE wire17)
   (DELAY
    (ABSOLUTE
-    (IOPATH I Z (0.163:0.163:0.163) (0.167:0.167:0.167))
+    (IOPATH I Z (0.164:0.164:0.164) (0.168:0.168:0.168))
    )
   )
  )
@@ -1809,7 +1797,7 @@
   (INSTANCE wire18)
   (DELAY
    (ABSOLUTE
-    (IOPATH I Z (0.162:0.162:0.162) (0.167:0.167:0.167))
+    (IOPATH I Z (0.163:0.163:0.163) (0.166:0.166:0.166))
    )
   )
  )
@@ -1818,7 +1806,7 @@
   (INSTANCE wire19)
   (DELAY
    (ABSOLUTE
-    (IOPATH I Z (0.206:0.206:0.206) (0.257:0.257:0.257))
+    (IOPATH I Z (0.184:0.184:0.184) (0.185:0.185:0.185))
    )
   )
  )

@@ -118,7 +118,6 @@ module chip_top (clk_PAD,
  wire net320;
  wire net321;
  wire net322;
- wire net323;
  wire net213;
  wire net20;
  wire net21;
@@ -41119,10 +41118,8 @@ module chip_top (clk_PAD,
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_259_836 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_259_842 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_259_906 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_259_950 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_259_966 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_259_974 ();
- gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_259_978 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_259_912 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_259_976 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_259_982 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_25_1046 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_25_1052 ();
@@ -41436,8 +41433,10 @@ module chip_top (clk_PAD,
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_260_801 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_260_807 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_260_871 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_260_877 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_260_941 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_260_877 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_260_893 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_260_901 ();
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_260_905 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_260_947 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_261_1046 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_261_1052 ();
@@ -73751,9 +73750,7 @@ module chip_top (clk_PAD,
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_446_1081 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_446_1087 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_446_1151 ();
- gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_446_1157 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_446_1197 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_446_1213 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_446_1157 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_446_1221 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_446_1227 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_446_1291 ();
@@ -74068,7 +74065,9 @@ module chip_top (clk_PAD,
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_448_1081 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_448_1087 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_448_1151 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_448_1157 ();
+ gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_448_1157 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_16 FILLER_448_1197 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_448_1213 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_448_1221 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_448_1227 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_448_1291 ();
@@ -96722,10 +96721,8 @@ module chip_top (clk_PAD,
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_62_731 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_62_737 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_62_801 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_32 FILLER_62_807 ();
- gf180mcu_fd_sc_mcu7t5v0__fillcap_8 FILLER_62_839 ();
- gf180mcu_fd_sc_mcu7t5v0__fill_2 FILLER_62_847 ();
- gf180mcu_fd_sc_mcu7t5v0__fill_1 FILLER_62_849 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_62_807 ();
+ gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_62_871 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_62_877 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_4 FILLER_62_941 ();
  gf180mcu_fd_sc_mcu7t5v0__fillcap_64 FILLER_62_947 ();
@@ -220916,8 +220913,6 @@ module chip_top (clk_PAD,
  gf180mcu_ws_io__dvss \dvss_pads[7].pad  ();
  gf180mcu_ws_io__dvss \dvss_pads[8].pad  ();
  gf180mcu_ws_io__dvss \dvss_pads[9].pad  ();
- gf180mcu_fd_sc_mcu7t5v0__dlyc_1 hold324 (.I(\bidir_PAD2CORE[0] ),
-    .Z(net323));
  con32_one_instruction \i_chip_core.con32_one_instruction_u  (.clk_ref(clk_PAD2CORE),
     .rst(net13),
     .rx_sample_pulse(\i_chip_core.rx_sample_pulse_wire ),
@@ -221024,7 +221019,7 @@ module chip_top (clk_PAD,
     .Z(net17));
  gf180mcu_fd_sc_mcu7t5v0__buf_12 wire18 (.I(net19),
     .Z(net18));
- gf180mcu_fd_sc_mcu7t5v0__buf_8 wire19 (.I(net323),
+ gf180mcu_fd_sc_mcu7t5v0__buf_8 wire19 (.I(\bidir_PAD2CORE[0] ),
     .Z(net19));
  gf180mcu_fd_sc_mcu7t5v0__buf_12 wire2 (.I(net3),
     .Z(net2));
