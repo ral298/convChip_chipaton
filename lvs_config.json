@@ -1,0 +1,30 @@
+{
+	"STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+	"INCLUDE_CONFIGS": [
+		"$LVS_ROOT/tech/$PDK/lvs_config.base.json"
+	],
+	"TOP_SOURCE": "con32_one_instruction",
+	"TOP_LAYOUT": "$TOP_SOURCE",
+	"EXTRACT_FLATGLOB": [
+		""
+	],
+	"EXTRACT_ABSTRACT": [
+		""
+	],
+	"LVS_FLATTEN": [
+		""
+	],
+	"LVS_NOFLATTEN": [
+		""
+	],
+	"LVS_IGNORE": [
+		""
+	],
+	"LVS_SPICE_FILES": [
+		"$UPRJ_ROOT/librelane/build/con32_one_instruction/spice/$TOP_LAYOUT.spice"
+	],
+	"LVS_VERILOG_FILES": [
+		"$UPRJ_ROOT/librelane/build/con32_one_instruction/pnl/$TOP_LAYOUT.pnl.v"
+	],
+	"LAYOUT_FILE": "$UPRJ_ROOT/librelane/build/con32_one_instruction/gds/$TOP_LAYOUT.gds"
+}

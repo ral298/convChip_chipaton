@@ -1,0 +1,40 @@
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+# Chipathon 2026: Project configuration
+# LICENSE: Apache License Version 2.0
+# http://www.apache.org/licenses/
+# ----- ------ ----- ----- ------ ----- ----- ------ -----
+
+# data will be pulled from main branch of the repo.
+# please be sure that the main branch contains the data you want to submit.
+# This file will be updated with more information later
+
+# ======================================================
+# Project metadata (used for documentation / review)
+# ======================================================
+project:
+  title: "Quantized 3×3 Convolution Accelerator for Embedded Vision Applications"             # Project title (e.g. "Simple CPU", "PLL", "ADC")
+  team: "A58 Capibara Convolucional"                      # Your Team name
+  discord: "Ral293"                   # Optional: Discord username (for support / communication)
+  description: "The accelerator processes 16×16 grayscale images stored on-chip and supports four programmable 3×3 convolution kernels using signed 8-bit arithmetic. Images and kernel coefficients are loaded through a 3 Mbaud UART interface..
+"  # Short one-line description
+  lvs_config: "lvs_config.json>"
+
+pins: 
+  - name: VSS
+    io_type: ground  # the first pin must be a ground connection
+  - name: rst
+    io_type: input_cmos
+  - name: clk_ref #input clock
+    io_type: input_schmitt
+  - name: rx_sample_pulse 	#output OE=1, IE=0
+    io_type: bidirectional_24ma
+  - name: rxd			#input  OE=0, IE=1
+    io_type: bidirectional_24ma
+  - name: rxd_out			#output OE=1, IE=0
+    io_type: bidirectional_24ma
+  - name: tx_busy			#output OE=1, IE=0
+    io_type: bidirectional_24ma
+  - name: txd 			#output OE=1, IE=0
+    io_type: bidirectional_24ma
+  - name: VDD
+    io_type: power  # subsequent power/ground cells cause a break in the I/O power rails
