@@ -21,20 +21,20 @@ project:
 
 pins: 
   - name: VSS
-    io_type: ground  # the first pin must be a ground connection
+    io_type: ground # the first pin must be a ground connection
   - name: rst
     io_type: input_cmos
   - name: clk_ref #input clock
     io_type: input_schmitt
-  - name: rx_sample_pulse 	#output OE=1, IE=0
+  - name: rx_sample_pulse #output OE=1, IE=0
     io_type: bidirectional_24ma
-  - name: rxd			#input  OE=0, IE=1
+  - name: rxd #input  OE=0, IE=1
     io_type: bidirectional_24ma
-  - name: rxd_out			#output OE=1, IE=0
+  - name: rxd_out #output OE=1, IE=0
     io_type: bidirectional_24ma
-  - name: tx_busy			#output OE=1, IE=0
+  - name: tx_busy #output OE=1, IE=0
     io_type: bidirectional_24ma
-  - name: txd 			#output OE=1, IE=0
+  - name: txd #output OE=1, IE=0
     io_type: bidirectional_24ma
   - name: VDD
-    io_type: power  # subsequent power/ground cells cause a break in the I/O power rails
+    io_type: power # subsequent power/ground cells cause a break in the I/O power rails
