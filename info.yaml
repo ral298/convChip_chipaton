@@ -12,14 +12,13 @@
 # Project metadata (used for documentation / review)
 # ======================================================
 project:
-  title: "Quantized 3×3 Convolution Accelerator for Embedded Vision Applications"             # Project title (e.g. "Simple CPU", "PLL", "ADC")
-  team: "A58 Capibara Convolucional"                      # Your Team name
-  discord: "Ral293"                   # Optional: Discord username (for support / communication)
-  description: "The accelerator processes 16×16 grayscale images stored on-chip and supports four programmable 3×3 convolution kernels using signed 8-bit arithmetic. Images and kernel coefficients are loaded through a 3 Mbaud UART interface..
-"  # Short one-line description
-  lvs_config: "lvs_config.json>"
+  title: "Quantized 3×3 Convolution Accelerator for Embedded Vision Applications" # Project title (e.g. "Simple CPU", "PLL", "ADC")
+  team: "A58 Capibara Convolucional" # Your Team name
+  discord: "Ral293" # Optional: Discord username (for support / communication)
+  description: "The accelerator processes 16×16 grayscale images stored on-chip and supports four programmable 3×3 convolution kernels using signed 8-bit arithmetic. Images and kernel coefficients are loaded through a 3 Mbaud UART interface.." # Short one-line description
+  lvs_config: "lvs_config.json"
 
-pins: 
+pins:
   - name: VSS
     io_type: ground # the first pin must be a ground connection
   - name: rst
