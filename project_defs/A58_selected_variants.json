@@ -1,0 +1,78 @@
+{
+  "project_size": {
+    "source_gds": "/Users/kanobailey/chipathon/2026/gds/A58/con32_one_instruction.gds",
+    "top_cell": "con32_one_instruction",
+    "layer": 0,
+    "datatype": 0,
+    "layout_dbu_microns": 0.001,
+    "rectangle_dbu": [
+      0,
+      0,
+      1400000,
+      1400000
+    ],
+    "width_microns": "1400",
+    "height_microns": "1400",
+    "top_cell_text": [
+      {
+        "text": "rst",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "rx_sample_pulse",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "rxd",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "rxd_out",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "tx_busy",
+        "layer": 36,
+        "datatype": 10
+      },
+      {
+        "text": "clk_ref",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "txd",
+        "layer": 42,
+        "datatype": 10
+      },
+      {
+        "text": "VDD",
+        "layer": 46,
+        "datatype": 10
+      },
+      {
+        "text": "VSS",
+        "layer": 46,
+        "datatype": 10
+      },
+      {
+        "text": "VDD",
+        "layer": 81,
+        "datatype": 10
+      },
+      {
+        "text": "VSS",
+        "layer": 81,
+        "datatype": 10
+      }
+    ]
+  },
+  "participant_pin_count": 9,
+  "selected_variants": [
+    "ACE"
+  ]
+}

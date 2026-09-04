@@ -8,6 +8,8 @@ cocotb/chip_top_tb_original.py
 
 librelane/build/con32_one_instruction/mag/con32_one_instruction.mag
 
+librelane/build/A58_con32_one_instruction/mag/A58_ACE.mag
+
 *.rar
 *.zip
 
