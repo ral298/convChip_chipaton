@@ -52,7 +52,7 @@ GND_NETS:
 
 FP_SIZING: "absolute"
 DIE_AREA: [0, 0, 1675, 1675]
-CORE_AREA: [100, 100, 1575, 1575]
+CORE_AREA: [100, 100, 1640, 1640]
 FP_DEF_TEMPLATE: "dir::../project_defs/ACE/A58_ACE.def"
 
 
