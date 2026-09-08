@@ -37,9 +37,9 @@ VERILOG_FILES:
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 
 # SDC files
-PNR_SDC_FILE: dir::chip_top.sdc
-SIGNOFF_SDC_FILE: dir::chip_top.sdc
-FALLBACK_SDC: dir::chip_top.sdc
+PNR_SDC_FILE: dir::chip_top_A58.sdc
+SIGNOFF_SDC_FILE: dir::chip_top_A58.sdc
+FALLBACK_SDC: dir::chip_top_A58.sdc
 
 # Power / ground nets
 VDD_NETS:
@@ -57,7 +57,7 @@ IGNORE_DISCONNECTED_MODULES:
 # Clock
 CLOCK_PORT: clk_PAD
 CLOCK_NET: clk_pad/Y
-CLOCK_PERIOD: 40 # 50 MHz
+CLOCK_PERIOD: 50 # 50 MHz
 
 
 ROUTING_CORES: 12              # Hilos para el Ruteador Detallado (TritonRoute)
@@ -72,8 +72,49 @@ STA_THREADS: 12
 # Fix hold violations
 PL_RESIZER_HOLD_SLACK_MARGIN: 0.35
 GRT_RESIZER_HOLD_SLACK_MARGIN: 0.3
-PL_RESIZER_SETUP_SLACK_MARGIN: 4
-GRT_RESIZER_SETUP_SLACK_MARGIN: 2
+PL_RESIZER_SETUP_SLACK_MARGIN: 0.5
+GRT_RESIZER_SETUP_SLACK_MARGIN: 0.3
+
+#Fix Clock
+DEDUPLICATE_CORNERS: true
+RUN_POST_CTS_RESIZER_TIMING: true
+RUN_POST_GRT_DESIGN_REPAIR: true
+RUN_POST_GRT_RESIZER_TIMING: true
+RUN_POST_GPL_DESIGN_REPAIR: true
+RUN_POST_CTS_RESIZER_TIMING: true
+PL_RESIZER_HOLD_MAX_BUFFER_PCT: 35
+PL_RESIZER_SETUP_MAX_BUFFER_PCT: 35
+GRT_RESIZER_HOLD_MAX_BUFFER_PCT: 35
+GRT_RESIZER_SETUP_MAX_BUFFER_PCT: 35
+PL_RESIZER_SETUP_GATE_CLONING: true
+GRT_RESIZER_SETUP_GATE_CLONING: true
+
+
+PL_RESIZER_BUFFER_INPUT_PORTS: true
+PL_RESIZER_BUFFER_OUTPUT_PORTS: true
+DESIGN_REPAIR_BUFFER_INPUT_PORTS: true
+DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: true
+SYNTH_BUFFERING: true
+SYNTH_SIZING: true
+SYNTH_DIRECT_WIRE_BUFFERING: true
+PL_RESIZER_SETUP_REPAIR_TNS_PCT: 100
+GRT_RESIZER_SETUP_REPAIR_TNS_PCT: 100
+PL_RESIZER_SETUP_MAX_UTIL_PCT: 70
+PL_RESIZER_ALLOW_SETUP_VIOS: true
+
+PL_RESIZER_HOLD_REPAIR_TNS_PCT: 100
+GRT_RESIZER_HOLD_REPAIR_TNS_PCT: 100
+
+# Fix Slew and Cap in Placement and Routing
+DESIGN_REPAIR_MAX_SLEW_PCT: 20
+GRT_DESIGN_REPAIR_MAX_SLEW_PCT: 20
+DESIGN_REPAIR_MAX_CAP_PCT: 40
+GRT_DESIGN_REPAIR_MAX_CAP_PCT: 40
+
+#
+CTS_SINK_CLUSTERING_ENABLE: true
+CTS_APPLY_NDR: full
+
 
 # Increase for more logic
 # on your die
@@ -190,52 +231,75 @@ MACROS:
         orientation: N
 
 
-  con32_one_instruction:
+  A58_ACE:
     gds:
-      - dir::build/con32_one_instruction/gds/con32_one_instruction.gds
+      - dir::build/A58_con32_one_instruction/gds/A58_ACE.gds
     lef:
-      - dir::build/con32_one_instruction/lef/con32_one_instruction.lef
+      - dir::build/A58_con32_one_instruction/lef/A58_ACE.lef
     vh:
-      - dir::build/con32_one_instruction/vh/con32_one_instruction.vh
+      - dir::build/A58_con32_one_instruction/vh/A58_ACE.vh
     nl:
-      - dir::build/con32_one_instruction/nl/con32_one_instruction.nl.v
+      - dir::build/A58_con32_one_instruction/nl/A58_ACE.nl.v
+    pnl:
+      - dir::build/A58_con32_one_instruction/pnl/A58_ACE.pnl.v
+    spice:
+      - dir::build/A58_con32_one_instruction/spice/A58_ACE.spice
+    sdf:
+      nom_tt_025C_5v00:
+      - dir::build/A58_con32_one_instruction/sdf/nom_tt_025C_5v00/A58_ACE__nom_tt_025C_5v00.sdf
+      nom_ss_125C_4v50:
+      - dir::build/A58_con32_one_instruction/sdf/nom_ss_125C_4v50/A58_ACE__nom_ss_125C_4v50.sdf
+      nom_ff_n40C_5v50:
+      - dir::build/A58_con32_one_instruction/sdf/nom_ff_n40C_5v50/A58_ACE__nom_ff_n40C_5v50.sdf
+      min_tt_025C_5v00:
+      - dir::build/A58_con32_one_instruction/sdf/min_tt_025C_5v00/A58_ACE__min_tt_025C_5v00.sdf
+      min_ss_125C_4v50:
+      - dir::build/A58_con32_one_instruction/sdf/min_ss_125C_4v50/A58_ACE__min_ss_125C_4v50.sdf
+      min_ff_n40C_5v50:
+      - dir::build/A58_con32_one_instruction/sdf/min_ff_n40C_5v50/A58_ACE__min_ff_n40C_5v50.sdf
+      max_tt_025C_5v00:
+      - dir::build/A58_con32_one_instruction/sdf/max_tt_025C_5v00/A58_ACE__max_tt_025C_5v00.sdf
+      max_ss_125C_4v50:
+      - dir::build/A58_con32_one_instruction/sdf/max_ss_125C_4v50/A58_ACE__max_ss_125C_4v50.sdf
+      max_ff_n40C_5v50:
+      - dir::build/A58_con32_one_instruction/sdf/max_ff_n40C_5v50/A58_ACE__max_ff_n40C_5v50.sdf    	
     lib:
       nom_tt_025C_5v00:
-      - dir::build/con32_one_instruction/lib/nom_tt_025C_5v00/con32_one_instruction__nom_tt_025C_5v00.lib
+      - dir::build/A58_con32_one_instruction/lib/nom_tt_025C_5v00/A58_ACE__nom_tt_025C_5v00.lib
       nom_ss_125C_4v50:
-      - dir::build/con32_one_instruction/lib/nom_ss_125C_4v50/con32_one_instruction__nom_ss_125C_4v50.lib
+      - dir::build/A58_con32_one_instruction/lib/nom_ss_125C_4v50/A58_ACE__nom_ss_125C_4v50.lib
       nom_ff_n40C_5v50:
-      - dir::build/con32_one_instruction/lib/nom_ff_n40C_5v50/con32_one_instruction__nom_ff_n40C_5v50.lib
+      - dir::build/A58_con32_one_instruction/lib/nom_ff_n40C_5v50/A58_ACE__nom_ff_n40C_5v50.lib
       min_tt_025C_5v00:
-      - dir::build/con32_one_instruction/lib/min_tt_025C_5v00/con32_one_instruction__min_tt_025C_5v00.lib
+      - dir::build/A58_con32_one_instruction/lib/min_tt_025C_5v00/A58_ACE__min_tt_025C_5v00.lib
       min_ss_125C_4v50:
-      - dir::build/con32_one_instruction/lib/min_ss_125C_4v50/con32_one_instruction__min_ss_125C_4v50.lib
+      - dir::build/A58_con32_one_instruction/lib/min_ss_125C_4v50/A58_ACE__min_ss_125C_4v50.lib
       min_ff_n40C_5v50:
-      - dir::build/con32_one_instruction/lib/min_ff_n40C_5v50/con32_one_instruction__min_ff_n40C_5v50.lib
+      - dir::build/A58_con32_one_instruction/lib/min_ff_n40C_5v50/A58_ACE__min_ff_n40C_5v50.lib
       max_tt_025C_5v00:
-      - dir::build/con32_one_instruction/lib/max_tt_025C_5v00/con32_one_instruction__max_tt_025C_5v00.lib
+      - dir::build/A58_con32_one_instruction/lib/max_tt_025C_5v00/A58_ACE__max_tt_025C_5v00.lib
       max_ss_125C_4v50:
-      - dir::build/con32_one_instruction/lib/max_ss_125C_4v50/con32_one_instruction__max_ss_125C_4v50.lib
+      - dir::build/A58_con32_one_instruction/lib/max_ss_125C_4v50/A58_ACE__max_ss_125C_4v50.lib
       max_ff_n40C_5v50:
-      - dir::build/con32_one_instruction/lib/max_ff_n40C_5v50/con32_one_instruction__max_ff_n40C_5v50.lib
+      - dir::build/A58_con32_one_instruction/lib/max_ff_n40C_5v50/A58_ACE__max_ff_n40C_5v50.lib
     spef:
       min:
-      - dir::build/con32_one_instruction/spef/min/con32_one_instruction.min.spef
+      - dir::build/A58_con32_one_instruction/spef/min/A58_ACE.min.spef
       nom:
-      - dir::build/con32_one_instruction/spef/nom/con32_one_instruction.nom.spef
+      - dir::build/A58_con32_one_instruction/spef/nom/A58_ACE.nom.spef
       max:
-      - dir::build/con32_one_instruction/spef/max/con32_one_instruction.max.spef
+      - dir::build/A58_con32_one_instruction/spef/max/A58_ACE.max.spef
     instances:
       # Ajusta el nombre de la instancia según esté declarada en chip_core.sv
       # y sus coordenadas [X, Y] dentro del área útil del core
-      i_chip_core.con32_one_instruction_u:
+      i_chip_core.A58_ACE_u:
         location: [700, 2400]
         orientation: N
 
 # Conexión de alimentación para el macro
 
 PDN_MACRO_CONNECTIONS:
-- i_chip_core.con32_one_instruction_u VDD VSS VDD VSS
+- i_chip_core.A58_ACE_u VDD VSS VDD VSS
 # Halo size around macros while cutting rows.
 # Workaround for: https://github.com/The-OpenROAD-Project/OpenROAD/issues/8868
 FP_MACRO_HORIZONTAL_HALO: 10
@@ -244,3 +308,39 @@ PDN_HORIZONTAL_HALO: 5
 PDN_VERTICAL_HALO: 5
 
 PDN_CFG: dir::pdn_cfg.tcl
+
+SYNTH_STRATEGY: "DELAY 0"
+LAYERS_RC:
+  "*":
+    Metal2:
+      res: 0.000385861
+      cap: 0.000135357
+    Metal3:
+      res: 0.000206673
+      cap: 0.000146141
+    Metal4:
+      res: 0.000168609
+      cap: 0.000150688
+    Metal5:
+      res: 7.92778e-05
+      cap: 0.000155595
+
+VIAS_R:
+  "*":
+    Via1:
+      res: 4.23
+    Via2:
+      res: 4.23
+    Via3:
+      res: 4.23
+    Via4:
+      res: 4.23
+  "max_*":
+    Via1:
+      res: 16.845
+    Via2:
+      res: 16.845
+    Via3:
+      res: 16.845
+    Via4:
+      res: 16.845

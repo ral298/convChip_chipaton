@@ -97,4 +97,4 @@ set_input_transition 0.5 [get_ports rst_n_PAD]
 
 # Declarar la línea de reset como False Path para evitar falsos negativos en Setup/Hold
 #set_false_path -from [get_ports rst_n_PAD]
-#set_false_path -to [get_pins i_chip_core.con32_one_instruction_u/rst]
+#set_false_path -to [get_pins i_chip_core.A58_ACE/rst]
