@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1787668359" />
-    <testcase name="test_uart_convolution" classname="chip_top_tb" file="/foss/designs/convChip_chipaton/cocotb/chip_top_tb.py" lineno="144" time="205.46616458892822" sim_time_ns="9383952.0" ratio_time="45671.5197792993" />
+    <property name="random_seed" value="1788992376" />
+    <testcase name="test_uart_convolution" classname="chip_top_tb" file="/foss/designs/convChip_chipaton/cocotb/chip_top_tb.py" lineno="144" time="232.48055791854858" sim_time_ns="9383927.0" ratio_time="40364.35168607834" />
   </testsuite>
 </testsuites>

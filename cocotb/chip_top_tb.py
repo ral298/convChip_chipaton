@@ -281,7 +281,7 @@ def chip_top_runner():
             sources.append(prim_v)
 
         sources.append(proj_path / f"../final/pnl/{hdl_toplevel}.pnl.v")
-        sources.append(proj_path / f"../librelane/build/con32_one_instruction/pnl/con32_one_instruction.pnl.v")
+        sources.append(proj_path / f"../librelane/build/A58_con32_one_instruction/pnl/A58_ACE.pnl.v")
         
         
         defines = {"FUNCTIONAL": True, "USE_POWER_PINS": True}
@@ -298,6 +298,7 @@ def chip_top_runner():
         sources.append(proj_path / "../src/suma_16b.v")
         sources.append(proj_path / "../src/uart_tx_4in4.v")
         sources.append(proj_path / "../src/uart_ultimo.v")
+        sources.append(proj_path / "../src/A58_ACE.sv")
 
     sources += [
         #Path(pdk_root) / pdk / "libs.ref/gf180mcu_fd_io/verilog/gf180mcu_fd_io.v",
