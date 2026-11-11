@@ -17,6 +17,7 @@ project:
   discord: "Ral293" # Optional: Discord username (for support / communication)
   description: "The accelerator processes 16×16 grayscale images stored on-chip and supports four programmable 3×3 convolution kernels using signed 8-bit arithmetic. Images and kernel coefficients are loaded through a 3 Mbaud UART interface.." # Short one-line description
   lvs_config: "lvs_config.json"
+  export_control: "documents/Export_Control_GF_Rev8.2.docx" 
 
 pins:
   - name: VSS

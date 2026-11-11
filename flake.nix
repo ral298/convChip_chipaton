@@ -75,6 +75,10 @@
 
                 # For logo generation
                 pillow
+                # matricial
+                numpy
+                matplotlib
+                scikit-image
               ];
           });
         }
