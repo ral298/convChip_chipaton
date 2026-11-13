@@ -79,6 +79,7 @@
                 numpy
                 matplotlib
                 scikit-image
+                pandas
               ];
           });
         }

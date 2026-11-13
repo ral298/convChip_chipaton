@@ -88,7 +88,7 @@ module A58_ACE (
     // 1. rxd (ENTRADA DEDICADA)
     assign rxd_OE                  = 1'b0; // Output Enable OFF
     assign rxd_IE                  = 1'b1; // Input Enable ON
-    assign rxd_CS                  = 1'b0; // CMOS
+    assign rxd_CS                  = 1'b1; // 0 - CMOS, 1 - smitt trigger 
     assign rxd_SL                  = 1'b1;
     assign rxd_PU                  = 1'b0; // Pull-up activo para mantener línea UART en alto si se desconecta
     assign rxd_PD                  = 1'b0;

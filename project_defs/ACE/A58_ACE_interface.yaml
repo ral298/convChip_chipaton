@@ -4,29 +4,21 @@ source_padring_def: build/padframes/A58/project_defs/ACE/A58_ACE_padring.def
 variant: ACE
 origin_microns:
 - '350'
-- '910'
+- '965'
 origin_dbu:
 - 70000
-- 182000
+- 193000
 size_microns:
-- '1675'
-- '1675'
+- '1620'
+- '1620'
 diearea_dbu:
 - 0
 - 0
-- 335000
-- 335000
-usable_area: 2805625
+- 324000
+- 324000
+usable_area: 2624400
 blockages: []
-metal2_blockages:
-- - 322000
-  - 334600
-  - 335000
-  - 335000
-- - 0
-  - 0
-  - 400
-  - 13000
+metal2_blockages: []
 routing_blockage_layers:
 - Metal1
 - Metal2
@@ -57,9 +49,9 @@ pins:
     - 210728
     translated_user:
     - 0
-    - 26828
+    - 15828
     - 200
-    - 28728
+    - 17728
   - routing_layer: Metal2
     top_level:
     - 69800
@@ -73,9 +65,9 @@ pins:
     - 208248
     translated_user:
     - 0
-    - 24198
+    - 13198
     - 200
-    - 26248
+    - 15248
   - routing_layer: Metal2
     top_level:
     - 69800
@@ -89,9 +81,9 @@ pins:
     - 205878
     translated_user:
     - 0
-    - 21828
+    - 10828
     - 200
-    - 23878
+    - 12878
   - routing_layer: Metal2
     top_level:
     - 69800
@@ -105,9 +97,9 @@ pins:
     - 203172
     translated_user:
     - 0
-    - 19122
+    - 8122
     - 200
-    - 21172
+    - 10172
   - routing_layer: Metal2
     top_level:
     - 69800
@@ -121,9 +113,9 @@ pins:
     - 200802
     translated_user:
     - 0
-    - 16752
+    - 5752
     - 200
-    - 18802
+    - 7802
   - routing_layer: Metal2
     top_level:
     - 69800
@@ -137,9 +129,9 @@ pins:
     - 198172
     translated_user:
     - 0
-    - 14272
+    - 3272
     - 200
-    - 16172
+    - 5172
 - user_pin_name: rst
   default_project_pin: rst_PU
   project_pin: rst_PU
@@ -163,9 +155,9 @@ pins:
     - 229807
     translated_user:
     - 0
-    - 47731
+    - 36731
     - 200
-    - 47807
+    - 36807
 - user_pin_name: rst
   default_project_pin: rst_PD
   project_pin: rst_PD
@@ -189,9 +181,9 @@ pins:
     - 228934
     translated_user:
     - 0
-    - 46858
+    - 35858
     - 200
-    - 46934
+    - 35934
 - user_pin_name: rst
   default_project_pin: rst
   project_pin: rst
@@ -215,9 +207,9 @@ pins:
     - 216828
     translated_user:
     - 0
-    - 34752
+    - 23752
     - 200
-    - 34828
+    - 23828
 - user_pin_name: clk_ref
   default_project_pin: clk_ref_PU
   project_pin: clk_ref_PU
@@ -241,9 +233,9 @@ pins:
     - 249807
     translated_user:
     - 0
-    - 67731
+    - 56731
     - 200
-    - 67807
+    - 56807
 - user_pin_name: clk_ref
   default_project_pin: clk_ref_PD
   project_pin: clk_ref_PD
@@ -267,9 +259,9 @@ pins:
     - 248934
     translated_user:
     - 0
-    - 66858
+    - 55858
     - 200
-    - 66934
+    - 55934
 - user_pin_name: clk_ref
   default_project_pin: clk_ref
   project_pin: clk_ref
@@ -293,9 +285,9 @@ pins:
     - 236828
     translated_user:
     - 0
-    - 54752
+    - 43752
     - 200
-    - 54828
+    - 43828
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_CS
   project_pin: rx_sample_pulse_CS
@@ -319,9 +311,9 @@ pins:
     - 270328
     translated_user:
     - 0
-    - 88252
+    - 77252
     - 200
-    - 88328
+    - 77328
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_SL
   project_pin: rx_sample_pulse_SL
@@ -345,9 +337,9 @@ pins:
     - 257266
     translated_user:
     - 0
-    - 75190
+    - 64190
     - 200
-    - 75266
+    - 64266
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_IE
   project_pin: rx_sample_pulse_IE
@@ -371,9 +363,9 @@ pins:
     - 268723
     translated_user:
     - 0
-    - 86647
+    - 75647
     - 200
-    - 86723
+    - 75723
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_OE
   project_pin: rx_sample_pulse_OE
@@ -397,9 +389,9 @@ pins:
     - 256974
     translated_user:
     - 0
-    - 74898
+    - 63898
     - 200
-    - 74974
+    - 63974
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_PU
   project_pin: rx_sample_pulse_PU
@@ -423,9 +415,9 @@ pins:
     - 269807
     translated_user:
     - 0
-    - 87731
+    - 76731
     - 200
-    - 87807
+    - 76807
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_PD
   project_pin: rx_sample_pulse_PD
@@ -449,9 +441,9 @@ pins:
     - 268934
     translated_user:
     - 0
-    - 86858
+    - 75858
     - 200
-    - 86934
+    - 75934
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_OUT
   project_pin: rx_sample_pulse_OUT
@@ -475,9 +467,9 @@ pins:
     - 257120
     translated_user:
     - 0
-    - 75044
+    - 64044
     - 200
-    - 75120
+    - 64120
 - user_pin_name: rx_sample_pulse
   default_project_pin: rx_sample_pulse_IN
   project_pin: rx_sample_pulse_IN
@@ -501,9 +493,9 @@ pins:
     - 256828
     translated_user:
     - 0
-    - 74752
+    - 63752
     - 200
-    - 74828
+    - 63828
 - user_pin_name: rxd
   default_project_pin: rxd_CS
   project_pin: rxd_CS
@@ -527,9 +519,9 @@ pins:
     - 290328
     translated_user:
     - 0
-    - 108252
+    - 97252
     - 200
-    - 108328
+    - 97328
 - user_pin_name: rxd
   default_project_pin: rxd_SL
   project_pin: rxd_SL
@@ -553,9 +545,9 @@ pins:
     - 277266
     translated_user:
     - 0
-    - 95190
+    - 84190
     - 200
-    - 95266
+    - 84266
 - user_pin_name: rxd
   default_project_pin: rxd_IE
   project_pin: rxd_IE
@@ -579,9 +571,9 @@ pins:
     - 288723
     translated_user:
     - 0
-    - 106647
+    - 95647
     - 200
-    - 106723
+    - 95723
 - user_pin_name: rxd
   default_project_pin: rxd_OE
   project_pin: rxd_OE
@@ -605,9 +597,9 @@ pins:
     - 276974
     translated_user:
     - 0
-    - 94898
+    - 83898
     - 200
-    - 94974
+    - 83974
 - user_pin_name: rxd
   default_project_pin: rxd_PU
   project_pin: rxd_PU
@@ -631,9 +623,9 @@ pins:
     - 289807
     translated_user:
     - 0
-    - 107731
+    - 96731
     - 200
-    - 107807
+    - 96807
 - user_pin_name: rxd
   default_project_pin: rxd_PD
   project_pin: rxd_PD
@@ -657,9 +649,9 @@ pins:
     - 288934
     translated_user:
     - 0
-    - 106858
+    - 95858
     - 200
-    - 106934
+    - 95934
 - user_pin_name: rxd
   default_project_pin: rxd_OUT
   project_pin: rxd_out
@@ -683,9 +675,9 @@ pins:
     - 277120
     translated_user:
     - 0
-    - 95044
+    - 84044
     - 200
-    - 95120
+    - 84120
 - user_pin_name: rxd
   default_project_pin: rxd_IN
   project_pin: rxd_IN
@@ -709,9 +701,9 @@ pins:
     - 276828
     translated_user:
     - 0
-    - 94752
+    - 83752
     - 200
-    - 94828
+    - 83828
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_CS
   project_pin: rxd_out_CS
@@ -735,9 +727,9 @@ pins:
     - 310328
     translated_user:
     - 0
-    - 128252
+    - 117252
     - 200
-    - 128328
+    - 117328
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_SL
   project_pin: rxd_out_SL
@@ -761,9 +753,9 @@ pins:
     - 297266
     translated_user:
     - 0
-    - 115190
+    - 104190
     - 200
-    - 115266
+    - 104266
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_IE
   project_pin: rxd_out_IE
@@ -787,9 +779,9 @@ pins:
     - 308723
     translated_user:
     - 0
-    - 126647
+    - 115647
     - 200
-    - 126723
+    - 115723
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_OE
   project_pin: rxd_out_OE
@@ -813,9 +805,9 @@ pins:
     - 296974
     translated_user:
     - 0
-    - 114898
+    - 103898
     - 200
-    - 114974
+    - 103974
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_PU
   project_pin: rxd_out_PU
@@ -839,9 +831,9 @@ pins:
     - 309807
     translated_user:
     - 0
-    - 127731
+    - 116731
     - 200
-    - 127807
+    - 116807
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_PD
   project_pin: rxd_out_PD
@@ -865,9 +857,9 @@ pins:
     - 308934
     translated_user:
     - 0
-    - 126858
+    - 115858
     - 200
-    - 126934
+    - 115934
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_OUT
   project_pin: rxd_out_OUT
@@ -891,9 +883,9 @@ pins:
     - 297120
     translated_user:
     - 0
-    - 115044
+    - 104044
     - 200
-    - 115120
+    - 104120
 - user_pin_name: rxd_out
   default_project_pin: rxd_out_IN
   project_pin: rxd_out_IN
@@ -917,9 +909,9 @@ pins:
     - 296828
     translated_user:
     - 0
-    - 114752
+    - 103752
     - 200
-    - 114828
+    - 103828
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_CS
   project_pin: tx_busy_CS
@@ -943,9 +935,9 @@ pins:
     - 330328
     translated_user:
     - 0
-    - 148252
+    - 137252
     - 200
-    - 148328
+    - 137328
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_SL
   project_pin: tx_busy_SL
@@ -969,9 +961,9 @@ pins:
     - 317266
     translated_user:
     - 0
-    - 135190
+    - 124190
     - 200
-    - 135266
+    - 124266
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_IE
   project_pin: tx_busy_IE
@@ -995,9 +987,9 @@ pins:
     - 328723
     translated_user:
     - 0
-    - 146647
+    - 135647
     - 200
-    - 146723
+    - 135723
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_OE
   project_pin: tx_busy_OE
@@ -1021,9 +1013,9 @@ pins:
     - 316974
     translated_user:
     - 0
-    - 134898
+    - 123898
     - 200
-    - 134974
+    - 123974
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_PU
   project_pin: tx_busy_PU
@@ -1047,9 +1039,9 @@ pins:
     - 329807
     translated_user:
     - 0
-    - 147731
+    - 136731
     - 200
-    - 147807
+    - 136807
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_PD
   project_pin: tx_busy_PD
@@ -1073,9 +1065,9 @@ pins:
     - 328934
     translated_user:
     - 0
-    - 146858
+    - 135858
     - 200
-    - 146934
+    - 135934
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_OUT
   project_pin: tx_busy_OUT
@@ -1099,9 +1091,9 @@ pins:
     - 317120
     translated_user:
     - 0
-    - 135044
+    - 124044
     - 200
-    - 135120
+    - 124120
 - user_pin_name: tx_busy
   default_project_pin: tx_busy_IN
   project_pin: tx_busy_IN
@@ -1125,9 +1117,9 @@ pins:
     - 316828
     translated_user:
     - 0
-    - 134752
+    - 123752
     - 200
-    - 134828
+    - 123828
 - user_pin_name: txd
   default_project_pin: txd_CS
   project_pin: txd_CS
@@ -1151,9 +1143,9 @@ pins:
     - 350328
     translated_user:
     - 0
-    - 168252
+    - 157252
     - 200
-    - 168328
+    - 157328
 - user_pin_name: txd
   default_project_pin: txd_SL
   project_pin: txd_SL
@@ -1177,9 +1169,9 @@ pins:
     - 337266
     translated_user:
     - 0
-    - 155190
+    - 144190
     - 200
-    - 155266
+    - 144266
 - user_pin_name: txd
   default_project_pin: txd_IE
   project_pin: txd_IE
@@ -1203,9 +1195,9 @@ pins:
     - 348723
     translated_user:
     - 0
-    - 166647
+    - 155647
     - 200
-    - 166723
+    - 155723
 - user_pin_name: txd
   default_project_pin: txd_OE
   project_pin: txd_OE
@@ -1229,9 +1221,9 @@ pins:
     - 336974
     translated_user:
     - 0
-    - 154898
+    - 143898
     - 200
-    - 154974
+    - 143974
 - user_pin_name: txd
   default_project_pin: txd_PU
   project_pin: txd_PU
@@ -1255,9 +1247,9 @@ pins:
     - 349807
     translated_user:
     - 0
-    - 167731
+    - 156731
     - 200
-    - 167807
+    - 156807
 - user_pin_name: txd
   default_project_pin: txd_PD
   project_pin: txd_PD
@@ -1281,9 +1273,9 @@ pins:
     - 348934
     translated_user:
     - 0
-    - 166858
+    - 155858
     - 200
-    - 166934
+    - 155934
 - user_pin_name: txd
   default_project_pin: txd_OUT
   project_pin: txd_OUT
@@ -1307,9 +1299,9 @@ pins:
     - 337120
     translated_user:
     - 0
-    - 155044
+    - 144044
     - 200
-    - 155120
+    - 144120
 - user_pin_name: txd
   default_project_pin: txd_IN
   project_pin: txd_IN
@@ -1333,9 +1325,9 @@ pins:
     - 336828
     translated_user:
     - 0
-    - 154752
+    - 143752
     - 200
-    - 154828
+    - 143828
 - user_pin_name: VDD
   default_project_pin: VDD
   project_pin: VDD
@@ -1359,9 +1351,9 @@ pins:
     - 370728
     translated_user:
     - 0
-    - 186828
+    - 175828
     - 200
-    - 188728
+    - 177728
   - routing_layer: Metal2
     top_level:
     - 69069
@@ -1375,9 +1367,9 @@ pins:
     - 368248
     translated_user:
     - 0
-    - 184198
+    - 173198
     - 200
-    - 186248
+    - 175248
   - routing_layer: Metal2
     top_level:
     - 69069
@@ -1391,9 +1383,9 @@ pins:
     - 365878
     translated_user:
     - 0
-    - 181828
+    - 170828
     - 200
-    - 183878
+    - 172878
   - routing_layer: Metal2
     top_level:
     - 69069
@@ -1407,9 +1399,9 @@ pins:
     - 363172
     translated_user:
     - 0
-    - 179122
+    - 168122
     - 200
-    - 181172
+    - 170172
   - routing_layer: Metal2
     top_level:
     - 69069
@@ -1423,9 +1415,9 @@ pins:
     - 360802
     translated_user:
     - 0
-    - 176752
+    - 165752
     - 200
-    - 178802
+    - 167802
   - routing_layer: Metal2
     top_level:
     - 69069
@@ -1439,22 +1431,36 @@ pins:
     - 358172
     translated_user:
     - 0
-    - 174272
+    - 163272
     - 200
-    - 176172
+    - 165172
 project_gds_size:
-  source_gds: /Users/kanobailey/chipathon/2026/gds/A58/con32_one_instruction.gds
+  source_gds: /Users/kanobailey/chipathon/2026/data/A58/librelane/build/con32_one_instruction/gds/con32_one_instruction.gds
   top_cell: con32_one_instruction
-  layer: 0
-  datatype: 0
+  block_type: digital
   layout_dbu_microns: 0.001
-  rectangle_dbu:
+  physical_bbox_dbu:
+  - 1810
+  - 7410
+  - 1398190
+  - 1392030
+  physical_bbox_microns:
+  - '1.81'
+  - '7.41'
+  - '1398.19'
+  - '1392.03'
+  prboundary_dbu:
   - 0
   - 0
   - 1400000
   - 1400000
-  width_microns: '1400'
-  height_microns: '1400'
+  prboundary_microns:
+  - '0'
+  - '0'
+  - '1400'
+  - '1400'
+  width_microns: '1396.38'
+  height_microns: '1384.62'
   top_cell_text:
   - text: rst
     layer: 36

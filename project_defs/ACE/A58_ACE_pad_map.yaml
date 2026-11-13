@@ -1,5 +1,5 @@
 spec_blob_sha: 7398a4da36e4d6ad9f9b76c06813b073c9c0ed2f
-source_info: info/A58_info.yaml
+source_info: data/A58/info.yaml
 source_template: /Users/kanobailey/chipathon/2026/padring/chipathon2026-system/padring_template.cfg
 block: ACE
 team_code: A58_ACE
